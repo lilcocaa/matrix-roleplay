@@ -185,6 +185,7 @@ div.box-channels {
 
             &::-webkit-scrollbar {
                 width: 8px;
+                height: 8px;
             }
 
             &::-webkit-scrollbar-track {
@@ -193,7 +194,7 @@ div.box-channels {
             }
 
             &::-webkit-scrollbar-corner {
-                background-color: @color-ds-2;
+                background-color: transparent;
             }
 
             &::-webkit-scrollbar-thumb {
@@ -277,6 +278,10 @@ div.box-content {
     @media screen and (min-width: 768px) {
         top: 0;
         left: 322px;
+
+        &.no-channels {
+            left: 72px;
+        }
     }
 
     >.inner {
@@ -309,6 +314,7 @@ div.box-content {
 
             &::-webkit-scrollbar {
                 width: 8px;
+                height: 8px;
             }
 
             &::-webkit-scrollbar-track {
@@ -317,7 +323,7 @@ div.box-content {
             }
 
             &::-webkit-scrollbar-corner {
-                background-color: @color-ds-2;
+                background-color: transparent;
             }
 
             &::-webkit-scrollbar-thumb {

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVYKGVQ7N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VLVYKGVQ7N');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="author" content="Matrix Roleplay">
+    <meta name="keywords" content="servidor,roleplay,rp,gta,rio de janeiro,rj,tema proprio">
+    <meta name="description" content="Servidor de Roleplay de GTA com tema próprio!">
+
+    <title>Matrix Roleplay</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/buttons.css">
+    <link rel="stylesheet" href="/css/site.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon_io/site.webmanifest">
+
+    <meta property="og:title" content="Matrix Roleplay">
+    <meta property="og:url" content="https://matrixroleplay.com.br">
+    <meta property="og:description" content="Servidor de Roleplay de GTA com tema próprio!">
+    <meta property="og:image" content="/img/favicon_io/android-chrome-512x512.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+</head>
+
+<body>
+    <div id="AppVue">
+
+        <header>
+            <!-- <div class="bg-animated"></div> -->
+
+            <div class="container">
+                <div class="logo">
+                    <img src="/img/logo-840x780.png" alt="Matrix Roleplay" class="img-responsive"
+                        style="width: 400px; margin: auto;">
+                </div>
+            </div>
+        </header>
+
+        <section class="site-content">
+            <div class="container">
+
+                <div class="alert alert-warning">
+                    Galerinha, iremos liberar mais itens aqui no site durante os próximos dias, então não perca os
+                    avisos que daremos em nosso <a href="http://discord.gg/tzdhgprV2R" target="_blank">Servidor do
+                        Discord</a>
+                </div>
+
+                <div class="category" v-for="category in categories">
+
+                    <h2 class="category-title">{{ category.title }}</h2>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-4" v-for="item in category.items">
+                            <div class="panel panel-list">
+                                <div class="panel-body">
+                                    <img :src="item.image" class="img-responsive">
+                                    <h2 class="item-title">{{ item.title }}</h2>
+
+                                    <p class="price">
+                                        <span class="title" v-if="item.discount">Desconto:</span>
+                                        <span class="title" v-if="!item.discount">Preço:</span>
+                                        <span class="value">{{ item.discount ? item.discount : item.price }}</span>
+                                    </p>
+                                </div>
+
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-xs-12">
+                                            <button class="btn btn-purple btn-block"
+                                                @click.prevent="openDetails(item)">Detalhes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <p>
+                <a href="http://discord.gg/tzdhgprV2R" class="underline" target="_blank">Matrix Roleplay</a> - Todos os
+                direitos reservados.
+            </p>
+            <p>
+                Acesse nosso <a href="http://discord.gg/tzdhgprV2R" class="underline" target="_blank">Servidor do
+                    Discord</a>
+            </p>
+            <p>
+                Acesse aqui as nossas <a href="/regras" class="underline">regras</a>
+            </p>
+        </footer>
+
+        <div class="modal fade" id="modalDetails" tabindex="-1" role="dialog" aria-labelledby="modalDetailsLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="modalDetailsLabel">{{ selectedProduct.title }}</h4>
+                    </div>
+                    <div class="modal-body" id="modalDetailsBody" v-html="selectedProduct.html"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark-3" data-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading"><img src="/img/bg/loading-3.gif"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"
+        integrity="sha512-BKbSR+cfyxLdMAsE0naLReFSLg8/pjbgfxHh/k/kUC82Hy7r6HtR5hLhobaln2gcTvzkyyehrdREdjpsQwy2Jw=="
+        crossorigin="anonymous"></script>
+
+    <script>var categoriesJson = `<%- categoriesJson %>`;</script>
+    <script src="/js/site.js"></script>
+
+</body>
+
+</html>

@@ -51,10 +51,12 @@
 
 <body class="text-white">
 
-    <header class="bg-gray-800 sm:h-full sm:max-h-192">
+    <header class="bg-gray-800 relative overflow-hidden sm:h-full sm:max-h-192">
+        <canvas id="c"></canvas>
+        <div class="skewed bottom right"></div>
 
         <!-- container -->
-        <div class="container mx-auto h-full px-4 py-24">
+        <div class="relative container mx-auto h-full px-4 py-24">
 
             <!-- row -->
             <div class="h-full flex space-x-8">
@@ -99,7 +101,7 @@
     <section class="bg-gray-900">
 
         <!-- container -->
-        <div class="h-full container mx-auto px-4 py-24">
+        <div class="h-full container mx-auto px-4 py-12">
 
             <!-- row -->
             <div class="h-full flex flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-8">
@@ -160,10 +162,12 @@
 
     </section>
 
-    <section class="bg-gray-800">
+    <!-- Premios -->
+    <section class="bg-gray-800 relative overflow-hidden">
+        <div class="skewed top left"></div>
 
         <!-- container -->
-        <div class="h-full container mx-auto px-4 py-24">
+        <div class="relative h-full container mx-auto px-4 pb-24 pt-48">
 
             <h2 class="text-4xl font-bold text-center mb-8">Prêmios</h2>
 
@@ -262,7 +266,8 @@
 
     </section>
 
-    <section class="bg-gray-900">
+    <section class="bg-gray-900 relative spikes">
+
         <div class="h-full container mx-auto px-4 py-24">
 
             <h2 class="text-4xl font-bold text-center mb-8">Top 10 Jogadores</h2>
@@ -351,9 +356,10 @@
                         </tr>
                     </tbody>
                 </table>
-                <!-- </div> -->
-
             </div>
+
+        </div>
+
     </section>
 
     <section class="bg-gray-800">
@@ -460,6 +466,9 @@
     </section>
 
     -->
+
+
+    <script src="/matrix.js"></script>
 
 </body>
 

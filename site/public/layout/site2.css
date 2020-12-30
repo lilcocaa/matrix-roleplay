@@ -58,3 +58,54 @@ body {
     max-height: 48rem;
   }
 }
+.skewed {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 0;
+  background-color: #111827;
+}
+.skewed.bottom {
+  top: 100%;
+}
+.skewed.bottom.right {
+  transform-origin: top left;
+  transform: skewY(-5deg);
+}
+.skewed.bottom.left {
+  transform-origin: top right;
+  transform: skewY(5deg);
+}
+.skewed.top {
+  bottom: 100%;
+}
+.skewed.top.right {
+  transform-origin: bottom left;
+  transform: skewY(5deg);
+}
+.skewed.top.left {
+  transform-origin: bottom right;
+  transform: skewY(-5deg);
+}
+.spikes::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 25px;
+  background-color: #1f2937;
+  background-size: 25px 100%;
+  background-image: linear-gradient(45deg, #111827 25%, transparent 25%), linear-gradient(-45deg, #111827 25%, transparent 25%);
+  background-position: 0 0;
+}
+#c {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

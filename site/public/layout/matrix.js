@@ -32,11 +32,13 @@ for (var x = 0; x < columns; x++)
 function draw() {
     // Fundo preto no <canvas>
     // Fundo translucido para mostrar o efeito dos caracteres
-    ctx.fillStyle = "rgba(31, 41, 55, 0.30)";
+    // ctx.fillStyle = "rgba(31, 41, 55, 0.30)";
+    ctx.fillStyle = "rgba(54, 57, 63, 0.30)";
     ctx.fillRect(0, 0, c.width, c.height);
 
-    ctx.fillStyle = "rgba(0, 255, 0, 0.30)";
     // ctx.fillStyle = "#0F0"; // Texto verde
+    // ctx.fillStyle = "rgba(0, 255, 0, 0.30)";
+    ctx.fillStyle = "rgba(0, 191, 0, 0.30)";
     ctx.font = font_size + "px arial";
     // Loop entre as quedas de caracteres
     for (var i = 0; i < drops.length; i++) {

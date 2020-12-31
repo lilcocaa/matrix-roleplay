@@ -64,7 +64,7 @@ body {
   right: 0;
   height: 100%;
   z-index: 0;
-  background-color: #111827;
+  background-color: #2F3136;
 }
 .skewed.bottom {
   top: 100%;
@@ -108,4 +108,37 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+}
+.bg-discord-200 {
+  background-color: #B9BBBE;
+}
+.bg-discord-300 {
+  background-color: #393C42;
+}
+.bg-discord-400 {
+  background-color: #36393F;
+}
+.bg-discord-500 {
+  background-color: #2E3338;
+}
+.bg-discord-600 {
+  background-color: #2F3136;
+}
+.bg-discord-700 {
+  background-color: #222427;
+}
+.bg-discord-800 {
+  background-color: #202225;
+}
+.text-logo-400 {
+  color: #00BF00;
+}
+.hover\:text-logo-400:hover {
+  color: #00BF00;
+}
+.border-logo-400 {
+  border-color: #00BF00;
+}
+.bg-logo-400 {
+  background-color: #00BF00;
 }

@@ -51,7 +51,7 @@
 
 <body class="text-white">
 
-    <header class="bg-gray-800 relative overflow-hidden sm:h-full sm:max-h-192">
+    <header class="bg-discord-400 relative overflow-hidden sm:h-full sm:max-h-192">
         <canvas id="c"></canvas>
         <div class="skewed bottom right"></div>
 
@@ -65,7 +65,7 @@
                 <div class="flex-1 flex flex-col justify-center">
                     <div class="flex-initial text-center lg:text-left">
                         <h1 class="text-4xl uppercase font-bold mb-8">
-                            Matrix <span class="text-green-500">Roleplay</span>
+                            Matrix <span class="text-logo-400">Roleplay</span>
                         </h1>
 
                         <p class="text-lg uppercase font-thin mb-8">
@@ -73,8 +73,8 @@
                         </p>
 
                         <p>
-                            <button class="bg-green-500 border border-green-500 px-8 py-4 rounded-sm font-bold
-                            uppercase transition-all hover:bg-transparent hover:text-green-500">
+                            <button class="bg-logo-400 border border-logo-400 px-8 py-4 rounded-sm font-bold
+                            uppercase transition-all hover:bg-transparent hover:text-logo-400">
                                 Conhecer Mais
                             </button>
                         </p>
@@ -84,8 +84,8 @@
 
                 <!-- col -->
                 <div class="hidden flex-1 lg:flex flex-col justify-center">
-                    <div>
-                        <img src="http://rockstheme.com/rocks/playdo-live/img/slider/s1.png" alt="">
+                    <div class="text-right">
+                        <img src="img/favicon_io/android-chrome-512x512.png" alt="" class="inline w-96">
                     </div>
                 </div>
                 <!-- /.col -->
@@ -98,100 +98,33 @@
 
     </header>
 
-    <section class="bg-gray-900">
+    <!-- Planos VIPs -->
+    <section class="bg-discord-600 relative overflow-hidden">
+        <!-- <div class="skewed top left"></div> -->
 
         <!-- container -->
-        <div class="h-full container mx-auto px-4 py-12">
+        <div class="relative h-full container mx-auto px-4 py-24">
 
-            <!-- row -->
-            <div class="h-full flex flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-8">
-
-                <!-- col -->
-                <div class="flex-1 bg-gray-700 p-8 rounded-md border-l-8 border-green-500">
-                    <div class="text-4xl font-bold uppercase text-green-500 mb-4">
-                        100+
-                    </div>
-
-                    <div class="flex items-center space-x-2">
-                        <div class="bg-green-500 w-3 h-3 rounded-full"></div>
-
-                        <div class="flex-grow text-xs font-bold uppercase">
-                            Usuário Online
-                        </div>
-                    </div>
-                </div>
-                <!-- /.col -->
-
-                <!-- col -->
-                <div class="flex-1 bg-gray-700 p-8 rounded-md border-l-8 border-green-500">
-                    <div class="text-4xl font-bold uppercase text-green-500 mb-4">
-                        1000+
-                    </div>
-
-                    <div class="flex items-center space-x-2">
-                        <div class="bg-green-500 w-3 h-3 rounded-full"></div>
-
-                        <div class="flex-grow text-xs font-bold uppercase">
-                            Usuário Ativos
-                        </div>
-                    </div>
-                </div>
-                <!-- /.col -->
-
-                <!-- col -->
-                <div class="flex-1 bg-gray-700 p-8 rounded-md border-l-8 border-green-500">
-                    <div class="text-4xl font-bold uppercase text-green-500 mb-4">
-                        10.000K+
-                    </div>
-
-                    <div class="flex items-center space-x-2">
-                        <div class="bg-green-500 w-3 h-3 rounded-full"></div>
-
-                        <div class="flex-grow text-xs font-bold uppercase">
-                            Em prêmios sorteados
-                        </div>
-                    </div>
-                </div>
-                <!-- /.col -->
-
-            </div>
-            <!-- /.row -->
-
-        </div>
-        <!-- /.container -->
-
-    </section>
-
-    <!-- Premios -->
-    <section class="bg-gray-800 relative overflow-hidden">
-        <div class="skewed top left"></div>
-
-        <!-- container -->
-        <div class="relative h-full container mx-auto px-4 pb-24 pt-48">
-
-            <h2 class="text-4xl font-bold text-center mb-8">Prêmios</h2>
+            <h2 class="text-4xl font-bold text-center mb-8">Planos VIPs</h2>
 
             <!-- row -->
             <div class="flex flex-col md:flex-row md:flex-wrap md:-mx-2">
 
                 <!-- col -->
                 <div class="pb-4 md:w-1/2 md:px-2 lg:w-1/4">
-                    <div class="h-full bg-gray-700 p-8 rounded-md text-center">
-                        <h3 class="text-xl font-bold mb-12 text-green-500">
-                            Melhor Facção
-                        </h3>
+                    <div class="h-full bg-discord-800 p-8 rounded-md text-center uppercase font-bold">
 
                         <div class="text-center">
-                            <img src="http://rockstheme.com/rocks/playdo-live/img/about/achive1.png" alt=""
-                                class="inline rounded-full mb-12">
+                            <img src="img/vips/bronze-200.png" alt=""
+                                class="inline rounded-full mb-12 max-w-full">
                         </div>
 
-                        <p>
-                            A melhor Facção recebe prêmios semanais
-                        </p>
+                        <h3 class="text-xl mb-12 text-yellow-400">
+                            VIP Bronze
+                        </h3>
 
                         <p>
-                            A melhor Facção recebe prêmios semanais
+                            Desconto: <span class="text-yellow-400">25%</span>
                         </p>
                     </div>
                 </div>
@@ -199,18 +132,19 @@
 
                 <!-- col -->
                 <div class="pb-4 md:w-1/2 md:px-2 lg:w-1/4">
-                    <div class="h-full bg-gray-700 p-8 rounded-md text-center">
-                        <h3 class="text-xl font-bold mb-12 text-green-500">
-                            Melhor Facção
-                        </h3>
+                    <div class="h-full bg-discord-800 p-8 rounded-md text-center uppercase font-bold">
 
                         <div class="text-center">
-                            <img src="http://rockstheme.com/rocks/playdo-live/img/about/achive1.png" alt=""
-                                class="inline rounded-full mb-12">
+                            <img src="img/vips/bronze-200.png" alt=""
+                                class="inline rounded-full mb-12 max-w-full">
                         </div>
 
+                        <h3 class="text-xl mb-12 text-yellow-400">
+                            VIP Bronze
+                        </h3>
+
                         <p>
-                            A melhor Facção recebe prêmios semanais
+                            Desconto: <span class="text-yellow-400">25%</span>
                         </p>
                     </div>
                 </div>
@@ -218,22 +152,19 @@
 
                 <!-- col -->
                 <div class="pb-4 md:w-1/2 md:px-2 lg:w-1/4">
-                    <div class="h-full bg-gray-700 p-8 rounded-md text-center">
-                        <h3 class="text-xl font-bold mb-12 text-green-500">
-                            Melhor Facção
-                        </h3>
+                    <div class="h-full bg-discord-800 p-8 rounded-md text-center uppercase font-bold">
 
                         <div class="text-center">
-                            <img src="http://rockstheme.com/rocks/playdo-live/img/about/achive1.png" alt=""
-                                class="inline rounded-full mb-12">
+                            <img src="img/vips/bronze-200.png" alt=""
+                                class="inline rounded-full mb-12 max-w-full">
                         </div>
 
-                        <p>
-                            A melhor Facção recebe prêmios semanais
-                        </p>
+                        <h3 class="text-xl mb-12 text-yellow-400">
+                            VIP Bronze
+                        </h3>
 
                         <p>
-                            A melhor Facção recebe prêmios semanais
+                            Desconto: <span class="text-yellow-400">25%</span>
                         </p>
                     </div>
                 </div>
@@ -241,18 +172,19 @@
 
                 <!-- col -->
                 <div class="pb-4 md:w-1/2 md:px-2 lg:w-1/4">
-                    <div class="h-full bg-gray-700 p-8 rounded-md text-center">
-                        <h3 class="text-xl font-bold mb-12 text-green-500">
-                            Melhor Facção
-                        </h3>
+                    <div class="h-full bg-discord-800 p-8 rounded-md text-center uppercase font-bold">
 
                         <div class="text-center">
-                            <img src="http://rockstheme.com/rocks/playdo-live/img/about/achive1.png" alt=""
-                                class="inline rounded-full mb-12">
+                            <img src="img/vips/bronze-200.png" alt=""
+                                class="inline rounded-full mb-12 max-w-full">
                         </div>
 
+                        <h3 class="text-xl mb-12 text-yellow-400">
+                            VIP Bronze
+                        </h3>
+
                         <p>
-                            A melhor Facção recebe prêmios semanais
+                            Desconto: <span class="text-yellow-400">25%</span>
                         </p>
                     </div>
                 </div>
@@ -265,208 +197,6 @@
         <!-- /.container -->
 
     </section>
-
-    <section class="bg-gray-900 relative spikes">
-
-        <div class="h-full container mx-auto px-4 py-24">
-
-            <h2 class="text-4xl font-bold text-center mb-8">Top 10 Jogadores</h2>
-
-            <div class="w-full overflow-auto">
-                <table class="table-auto min-w-full">
-                    <thead>
-                        <tr class="bg-gray-800">
-                            <th class="p-4 text-left">Jogador</th>
-                            <th class="p-4 text-right">Nível</th>
-                            <th class="p-4 text-left">Emprego/Facção</th>
-                            <th class="p-4 text-center">Entrou em</th>
-                            <th class="p-4 text-right">Vitórias em ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-gray-700">
-                            <td class="p-4 text-left font-medium">Jogador</td>
-                            <td class="p-4 text-right font-medium">Nível</td>
-                            <td class="p-4 text-left font-medium">Emprego/Facção</td>
-                            <td class="p-4 text-center font-medium">Entrou em</td>
-                            <td class="p-4 text-right font-medium">Vitórias em ações</td>
-                        </tr>
-                        <tr class="bg-gray-800">
-                            <td class="p-4 text-left font-medium">Jogador</td>
-                            <td class="p-4 text-right font-medium">Nível</td>
-                            <td class="p-4 text-left font-medium">Emprego/Facção</td>
-                            <td class="p-4 text-center font-medium">Entrou em</td>
-                            <td class="p-4 text-right font-medium">Vitórias em ações</td>
-                        </tr>
-                        <tr class="bg-gray-700">
-                            <td class="p-4 text-left font-medium">Jogador</td>
-                            <td class="p-4 text-right font-medium">Nível</td>
-                            <td class="p-4 text-left font-medium">Emprego/Facção</td>
-                            <td class="p-4 text-center font-medium">Entrou em</td>
-                            <td class="p-4 text-right font-medium">Vitórias em ações</td>
-                        </tr>
-                        <tr class="bg-gray-800">
-                            <td class="p-4 text-left font-medium">Jogador</td>
-                            <td class="p-4 text-right font-medium">Nível</td>
-                            <td class="p-4 text-left font-medium">Emprego/Facção</td>
-                            <td class="p-4 text-center font-medium">Entrou em</td>
-                            <td class="p-4 text-right font-medium">Vitórias em ações</td>
-                        </tr>
-                        <tr class="bg-gray-700">
-                            <td class="p-4 text-left font-medium">Jogador</td>
-                            <td class="p-4 text-right font-medium">Nível</td>
-                            <td class="p-4 text-left font-medium">Emprego/Facção</td>
-                            <td class="p-4 text-center font-medium">Entrou em</td>
-                            <td class="p-4 text-right font-medium">Vitórias em ações</td>
-                        </tr>
-                        <tr class="bg-gray-800">
-                            <td class="p-4 text-left font-medium">Jogador</td>
-                            <td class="p-4 text-right font-medium">Nível</td>
-                            <td class="p-4 text-left font-medium">Emprego/Facção</td>
-                            <td class="p-4 text-center font-medium">Entrou em</td>
-                            <td class="p-4 text-right font-medium">Vitórias em ações</td>
-                        </tr>
-                        <tr class="bg-gray-700">
-                            <td class="p-4 text-left font-medium">Jogador</td>
-                            <td class="p-4 text-right font-medium">Nível</td>
-                            <td class="p-4 text-left font-medium">Emprego/Facção</td>
-                            <td class="p-4 text-center font-medium">Entrou em</td>
-                            <td class="p-4 text-right font-medium">Vitórias em ações</td>
-                        </tr>
-                        <tr class="bg-gray-800">
-                            <td class="p-4 text-left font-medium">Jogador</td>
-                            <td class="p-4 text-right font-medium">Nível</td>
-                            <td class="p-4 text-left font-medium">Emprego/Facção</td>
-                            <td class="p-4 text-center font-medium">Entrou em</td>
-                            <td class="p-4 text-right font-medium">Vitórias em ações</td>
-                        </tr>
-                        <tr class="bg-gray-700">
-                            <td class="p-4 text-left font-medium">Jogador</td>
-                            <td class="p-4 text-right font-medium">Nível</td>
-                            <td class="p-4 text-left font-medium">Emprego/Facção</td>
-                            <td class="p-4 text-center font-medium">Entrou em</td>
-                            <td class="p-4 text-right font-medium">Vitórias em ações</td>
-                        </tr>
-                        <tr class="bg-gray-800">
-                            <td class="p-4 text-left font-medium">Jogador</td>
-                            <td class="p-4 text-right font-medium">Nível</td>
-                            <td class="p-4 text-left font-medium">Emprego/Facção</td>
-                            <td class="p-4 text-center font-medium">Entrou em</td>
-                            <td class="p-4 text-right font-medium">Vitórias em ações</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="bg-gray-800">
-        <div class="h-full container mx-auto px-4 py-24">
-
-            <h2 class="text-4xl font-bold text-center mb-4">Sistema de Nível</h2>
-
-            <p class="text-lg font-thin text-center mb-8">
-                Sistema único de níveis, que permite desbloquear prêmios incríveis!
-            </p>
-
-            <!-- row -->
-            <div class="h-full flex flex-col space-y-8 lg:flex-row lg:space-y-0 lg:space-x-8">
-
-                <div class="flex-1 flex space-x-8 bg-gray-700 p-8 rounded-md">
-                    <div class="flex-none w-12 rounded-full flex flex-col justify-center">
-                        <img src="http://rockstheme.com/rocks/playdo-live/img/about/achive1.png" alt=""
-                            class="w-12 rounded-full">
-                    </div>
-
-                    <div class="flex-grow flex flex-col justify-center">
-                        <p class="flex-initial font-bold uppercase text-green-500">
-                            Toda ação gera XP
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex-1 flex space-x-8 bg-gray-700 p-8 rounded-md">
-                    <div class="flex-none w-12 rounded-full flex flex-col justify-center">
-                        <img src="http://rockstheme.com/rocks/playdo-live/img/about/achive1.png" alt=""
-                            class="w-12 rounded-full">
-                    </div>
-
-                    <div class="flex-grow flex flex-col justify-center">
-                        <p class="flex-initial font-bold uppercase text-green-500">
-                            O XP irá te ajudar a ganhar níveis
-                        </p>
-                    </div>
-                </div>
-
-                <div class="flex-1 flex space-x-8 bg-gray-700 p-8 rounded-md">
-                    <div class="flex-none w-12 rounded-full flex flex-col justify-center">
-                        <img src="http://rockstheme.com/rocks/playdo-live/img/about/achive1.png" alt=""
-                            class="w-12 rounded-full">
-                    </div>
-
-                    <div class="flex-grow flex flex-col justify-center">
-                        <p class="flex-initial font-bold uppercase text-green-500">
-                            E a cada 10 níveis você ganha prêmios!
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-            <!-- /.row -->
-
-        </div>
-    </section>
-
-    <section class="bg-gray-900">
-        <div class="h-full container mx-auto px-4 py-24">
-
-            <h2 class="text-4xl font-bold text-center mb-8">Itens VIPs</h2>
-
-            <p class="text-lg text-center mb-8">
-                Contamos com itens VIPs exclusivos.
-            </p>
-
-            <p class="text-center">
-                <button
-                    class="bg-green-500 border border-green-500 px-8 py-4 rounded-sm uppercase transition-all hover:bg-transparent hover:text-green-500">Ver
-                    itens VIPs</button>
-            </p>
-
-        </div>
-    </section>
-
-    <!--
-
-    <section class="bg-gray-800">
-        <div class="h-full container mx-auto px-4 py-24">
-
-            <div class="row">
-
-                <div class="col-xs-12 col-sm-6">
-                    <p>
-                        [IMAGEM AQUI]
-                    </p>
-                </div>
-
-                <div class="col-xs-12 col-sm-6">
-                    <p>
-                        Comece a jogar agora!
-                    </p>
-
-                    <p>
-                        Começando agora, você já concorre aos prêmios mensais e semanais!
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    -->
-
 
     <script src="matrix.js"></script>
 

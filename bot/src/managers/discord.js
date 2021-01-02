@@ -225,6 +225,17 @@ async function analyzeMessages() {
     });
 }
 
+// async function jobAnalyseMessages() {
+//     // console.log('jobAnalyseMessages()');
+//     // console.log(`----------------------`);
+
+//     await analyzeMessages();
+
+//     setTimeout(function () {
+//         jobAnalyseMessages();
+//     }, 10000);
+// }
+
 module.exports = {
     getMessageVars,
     sendMessage,

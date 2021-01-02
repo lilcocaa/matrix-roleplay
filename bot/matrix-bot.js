@@ -7,19 +7,9 @@ const moment = require('moment');
 const { Client, MessageEmbed } = require('discord.js');
 const client = new Client();
 
-const { getMessageVars, sendMessage, saveMessage, analyzeMessages } = require('./src/managers/discord');
+const { getMessageVars, sendMessage, saveMessage } = require('./src/managers/discord');
 const { releaseWhitelist } = require('./src/managers/whitelist');
 
-// async function jobAnalyseMessages() {
-//     // console.log('jobAnalyseMessages()');
-//     // console.log(`----------------------`);
-
-//     await analyzeMessages();
-
-//     setTimeout(function () {
-//         jobAnalyseMessages();
-//     }, 10000);
-// }
 
 client.on('ready', async () => {
     const date = moment().format('DD/MM/YYYY HH:mm:ss');
@@ -29,18 +19,6 @@ client.on('ready', async () => {
     console.log(` - ID: ${client.user.id}`);
     console.log(` - USERNAME: ${client.user.username}`);
     console.log(`----------------------`);
-
-    // const guild = client.guilds.cache.get(process.env.DS_GUILD);
-    // console.log(' - GUILD ID:', guild.id);
-    // console.log(' - GUILD NAME:', guild.name);
-    // console.log(`----------------------`);
-
-    // guild.roles.cache.map(role => {
-    //     console.log(' - role:', role.id, role.name);
-    // });
-    // console.log(`----------------------`);
-
-    // jobAnalyseMessages();
 });
 
 client.on('message', async message => {
@@ -59,22 +37,17 @@ client.on('message', async message => {
         messageArgs,
     } = getMessageVars(message);
 
-    // salvar todas as mensagens para log futuro
-    // saveMessage(message);
-
     if (isBot) return;
 
     if (isDm) return;
 
     if (guild.id != process.env.DS_GUILD) return;
 
-    // console.log('message', message);
-
     // salvar todas as mensagens para log futuro
-    // saveMessage(message);
+    saveMessage(message);
 
     // comandos de debug
-    if (messageCommand == 'debug2') {
+    if (messageCommand == 'debug') {
         console.log('=> COMMAND: !debug');
         console.log(' - author:', author.id, author.username);
         console.log(' - channel:', channel.id, channel.name);
@@ -89,7 +62,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand == 'jobs2') {
+    if (messageCommand == 'jobs') {
         console.log('=> COMMAND: !jobs');
 
         (new Promise((resolve) => {
@@ -124,7 +97,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === 'clear2') {
+    if (messageCommand === 'clear') {
         console.log('=> COMMAND: !clear');
         console.log('-----------------------');
         fetched = await message.channel.messages.fetch({ limit: 100 });
@@ -146,7 +119,7 @@ client.on('message', async message => {
     }
 
     if (channel.id == process.env.DS_CHANNEL_WHITELIST) {
-        if (messageCommand === 'liberar2') {
+        if (messageCommand === 'liberar') {
             console.log('=> COMMAND: !liberar');
             console.log('-----------------------');
 

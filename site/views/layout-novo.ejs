@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVYKGVQ7N"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-VLVYKGVQ7N');
+    </script>
+
+    <title>Matrix Roleplay</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#00BF00">
+    <meta name="msapplication-TileImage" content="/img/favicon_io/android-chrome-192x192.png">
+    <meta name="theme-color" content="#00BF00">
+    <meta name="author" content="Matrix Roleplay">
+    <meta name="keywords" content="servidor,roleplay,rp,gta,rio de janeiro,rj,tema proprio">
+    <meta name="description" content="Servidor de Roleplay de GTA com tema próprio!">
+
+    <meta property="og:title" content="Matrix Roleplay">
+    <meta property="og:description" content="Servidor de Roleplay de GTA com tema próprio!">
+    <meta property="og:image" content="/img/favicon_io/android-chrome-512x512.png">
+    <meta property="og:url" content="https://matrixroleplay.com.br">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_BR">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon_io/site.webmanifest">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"
+        integrity="sha512-+WF6UMXHki/uCy0vATJzyA9EmAcohIQuwpNz0qEO+5UeE5ibPejMRdFuARSrl1trs3skqie0rY/gNiolfaef5w=="
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="/css/layout-novo.css">
+</head>
+
+<body class="text-white">
+    <div id="AppVue">
+
+        <header class="bg-discord-400 relative overflow-hidden sm:h-full sm:max-h-192">
+            <canvas id="c"></canvas>
+            <div class="skewed bottom right bg-discord-600"></div>
+
+            <!-- container -->
+            <div class="relative container mx-auto h-full px-4 py-24">
+
+                <!-- row -->
+                <div class="h-full flex space-x-8">
+
+                    <!-- col -->
+                    <div class="flex-1 flex flex-col justify-center">
+                        <div class="flex-initial text-center lg:text-left">
+                            <h1 class="text-4xl uppercase font-bold mb-8">
+                                Matrix <span class="text-logo-400">Roleplay</span>
+                            </h1>
+
+                            <p class="text-lg uppercase font-thin mb-8">
+                                Adipisicing ut commodo sint mollit sit sint dolore nostrud ut.
+                            </p>
+
+                            <p>
+                                <button
+                                    class="bg-logo-400 border border-logo-400 px-8 py-4 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400">
+                                    Conhecer Mais
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+
+                    <!-- col -->
+                    <div class="hidden flex-1 lg:flex flex-col justify-center">
+                        <div class="text-right">
+                            <img src="img/favicon_io/android-chrome-512x512.png" alt="" class="inline w-96">
+                        </div>
+                    </div>
+                    <!-- /.col -->
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container -->
+
+        </header>
+
+        <!-- Planos VIPs -->
+        <section class="relative overflow-hidden" v-for="(category, category_i) in categories" :class="{
+            'bg-discord-600': category_i % 2 == 0,
+            'bg-discord-400': category_i % 2 == 1,
+        }">
+            <div class="skewed bottom right" :class="{
+                'bg-discord-400': category_i != (categories.length - 1) && category_i % 2 == 0,
+                'bg-discord-600': category_i != (categories.length - 1) && category_i % 2 == 1,
+                'bg-discord-800': category_i == (categories.length - 1),
+            }"></div>
+
+            <!-- container -->
+            <div class="relative h-full container mx-auto px-4 pt-24 pb-48">
+
+                <h2 class="text-4xl font-bold text-center mb-8">{{ category.title }} [{{ category_i }},
+                    {{ categories.length }}]</h2>
+
+                <!-- row -->
+                <div class="flex flex-col sm:flex-row sm:flex-wrap sm:-mx-2">
+
+                    <!-- col -->
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3" v-for="item in category.items">
+                        <div
+                            class="h-full bg-discord-800 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+
+                            <div class="text-center">
+                                <img :src="item.image" alt="item.title" class="inline rounded-sm mb-12 max-w-full">
+                            </div>
+
+                            <h3 class="mb-4 text-yellow-400">
+                                {{ item.title }}
+                            </h3>
+
+                            <p class="mb-12">
+                                <span v-if="item.discount">Desconto:</span>
+                                <span v-if="!item.discount">Preço:</span>
+                                <span class="text-yellow-400">{{ item.discount ? item.discount : item.price }}</span>
+                            </p>
+
+                            <p>
+                                <button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full"
+                                    @click.prevent="openDetails(item)">
+                                    Detalhes
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- /.col -->
+
+                </div>
+                <!-- /.row -->
+
+            </div>
+            <!-- /.container -->
+
+        </section>
+
+        <footer class="bg-discord-800">
+
+            <!-- container -->
+            <div class="relative h-full container mx-auto px-4 py-12 text-center">
+                <p>
+                    <a href="http://discord.gg/tzdhgprV2R" class="text-logo-400 hover:underline transition-all duration-300" target="_blank">Matrix Roleplay</a> - Todos
+                    os
+                    direitos reservados.
+                </p>
+                <p>
+                    Acesse nosso <a href="http://discord.gg/tzdhgprV2R" class="text-logo-400 hover:underline transition-all duration-300" target="_blank">Servidor do
+                        Discord</a>
+                </p>
+                <p>
+                    Acesse aqui as nossas <a href="/regras" class="text-logo-400 hover:underline transition-all duration-300">regras</a>
+                </p>
+
+            </div>
+            <!-- /.container -->
+        </footer>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"
+        integrity="sha512-BKbSR+cfyxLdMAsE0naLReFSLg8/pjbgfxHh/k/kUC82Hy7r6HtR5hLhobaln2gcTvzkyyehrdREdjpsQwy2Jw=="
+        crossorigin="anonymous"></script>
+
+    <script>var categoriesJson = `<%- categoriesJson %>`;</script>
+    <script src="/js/layout-novo.js"></script>
+    <script src="/lib/matrix.js"></script>
+
+</body>
+
+</html>

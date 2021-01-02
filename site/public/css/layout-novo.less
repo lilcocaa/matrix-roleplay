@@ -1,0 +1,190 @@
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAnsSUbOvISTs.woff2) format('woff2');
+    unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
+/* cyrillic */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAnsSUZevISTs.woff2) format('woff2');
+    unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+/* vietnamese */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAnsSUbuvISTs.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAnsSUb-vISTs.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAnsSUYevI.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+// @color-ds-1: #202225;
+// @color-ds-2: #2F3136;
+// @color-ds-3: #36393F;
+@color-logo-400: #00BF00;
+@color-discord-200: #B9BBBE;
+@color-discord-300: #393C42;
+@color-discord-400: #36393F;
+@color-discord-500: #2E3338;
+@color-discord-600: #2F3136;
+@color-discord-700: #222427;
+@color-discord-800: #202225;
+
+.font-nunito {
+    font-family: 'Nunito', sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    .font-nunito;
+}
+
+body {
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: @color-discord-800;
+        // border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: @color-logo-400;
+        // border-radius: 4px;
+    }
+}
+
+@media (min-width: 640px) {
+    .sm\:max-h-192 {
+        max-height: 48rem;
+    }
+}
+
+.skewed {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    height: 100%;
+
+    z-index: 0;
+    // transform-origin: top left;
+    // background-color: #111827;
+    // background-color: @color-discord-600;
+
+    &.bottom {
+        top: 100%;
+
+        &.right {
+            transform-origin: top left;
+            transform: skewY(-5deg);
+        }
+
+        &.left {
+            transform-origin: top right;
+            transform: skewY(5deg);
+        }
+    }
+
+    &.top {
+        bottom: 100%;
+
+        &.right {
+            transform-origin: bottom left;
+            transform: skewY(5deg);
+        }
+
+        &.left {
+            transform-origin: bottom right;
+            transform: skewY(-5deg);
+        }
+    }
+}
+
+.spikes::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 25px;
+
+    background-color: rgb(31, 41, 55);
+    background-size: 25px 100%;
+    background-image:
+        linear-gradient(45deg, rgb(17, 24, 39) 25%, transparent 25%),
+        linear-gradient(-45deg, rgb(17, 24, 39) 25%, transparent 25%);
+    background-position: 0 0;
+
+}
+
+#c {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+// .bg-discord-50 { background-color: #; }
+// .bg-discord-100 { background-color: #; }
+.bg-discord-200 { background-color: @color-discord-200; }
+.bg-discord-300 { background-color: @color-discord-300; }
+.bg-discord-400 { background-color: @color-discord-400; }
+.bg-discord-500 { background-color: @color-discord-500; }
+.bg-discord-600 { background-color: @color-discord-600; }
+.bg-discord-700 { background-color: @color-discord-700; }
+.bg-discord-800 { background-color: @color-discord-800; }
+// .bg-discord-900 { background-color: #; }
+
+.text-logo-400 { color: @color-logo-400; }
+.hover\:text-logo-400:hover { color: @color-logo-400; }
+
+.border-logo-400 { border-color: @color-logo-400; }
+
+.bg-logo-400 { background-color: @color-logo-400; }
+

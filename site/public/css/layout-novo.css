@@ -121,36 +121,27 @@ body::-webkit-scrollbar-thumb {
   right: 0;
   bottom: 0;
 }
-.bg-discord-200 {
-  background-color: #B9BBBE;
+.modal {
+  transition: opacity 0.25s ease;
 }
-.bg-discord-300 {
-  background-color: #393C42;
+body.modal-active {
+  overflow-x: hidden;
+  overflow-y: visible !important;
 }
-.bg-discord-400 {
+.loading {
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: #36393F;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAL0lEQVQYV2M0s7T//+rlMwZGBghgVFBS/Q/j/IcJgGTExKUYwCoVlVRBEmAAYgAA/gQNnlK88bUAAAAASUVORK5CYII=');
 }
-.bg-discord-500 {
-  background-color: #2E3338;
-}
-.bg-discord-600 {
-  background-color: #2F3136;
-}
-.bg-discord-700 {
-  background-color: #222427;
-}
-.bg-discord-800 {
-  background-color: #202225;
-}
-.text-logo-400 {
-  color: #00BF00;
-}
-.hover\:text-logo-400:hover {
-  color: #00BF00;
-}
-.border-logo-400 {
-  border-color: #00BF00;
-}
-.bg-logo-400 {
-  background-color: #00BF00;
+.loading img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
 }

@@ -170,21 +170,30 @@ body {
     bottom: 0;
 }
 
-// .bg-discord-50 { background-color: #; }
-// .bg-discord-100 { background-color: #; }
-.bg-discord-200 { background-color: @color-discord-200; }
-.bg-discord-300 { background-color: @color-discord-300; }
-.bg-discord-400 { background-color: @color-discord-400; }
-.bg-discord-500 { background-color: @color-discord-500; }
-.bg-discord-600 { background-color: @color-discord-600; }
-.bg-discord-700 { background-color: @color-discord-700; }
-.bg-discord-800 { background-color: @color-discord-800; }
-// .bg-discord-900 { background-color: #; }
+.modal {
+    transition: opacity 0.25s ease;
+}
 
-.text-logo-400 { color: @color-logo-400; }
-.hover\:text-logo-400:hover { color: @color-logo-400; }
+body.modal-active {
+    overflow-x: hidden;
+    overflow-y: visible !important;
+}
 
-.border-logo-400 { border-color: @color-logo-400; }
+.loading {
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: @color-discord-400;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAL0lEQVQYV2M0s7T//+rlMwZGBghgVFBS/Q/j/IcJgGTExKUYwCoVlVRBEmAAYgAA/gQNnlK88bUAAAAASUVORK5CYII=');
 
-.bg-logo-400 { background-color: @color-logo-400; }
-
+    img {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+    }
+}

@@ -43,10 +43,12 @@
         integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
         crossorigin="anonymous" />
 
+    <link rel="stylesheet" href="/css/colors.css">
     <link rel="stylesheet" href="/css/layout-novo.css">
 </head>
 
 <body class="text-white">
+
     <div id="AppVue">
 
         <header class="bg-discord-400 relative overflow-hidden sm:h-full sm:max-h-192">
@@ -67,7 +69,7 @@
                             </h1>
 
                             <p class="text-lg uppercase font-thin mb-8">
-                                Adipisicing ut commodo sint mollit sit sint dolore nostrud ut.
+                                Servidor brasileiro com tema próprio de RPG baseado em GTA.
                             </p>
 
                             <p>
@@ -83,7 +85,7 @@
                     <!-- col -->
                     <div class="hidden flex-1 lg:flex flex-col justify-center">
                         <div class="text-right">
-                            <img src="img/favicon_io/android-chrome-512x512.png" alt="" class="inline w-96">
+                            <img src="img/favicon_io/android-chrome-512x512.png" alt="" class="inline w-80">
                         </div>
                     </div>
                     <!-- /.col -->
@@ -96,7 +98,7 @@
 
         </header>
 
-        <!-- Planos VIPs -->
+        <!-- Produtos -->
         <section class="relative overflow-hidden" v-for="(category, category_i) in categories" :class="{
             'bg-discord-600': category_i % 2 == 0,
             'bg-discord-400': category_i % 2 == 1,
@@ -110,8 +112,9 @@
             <!-- container -->
             <div class="relative h-full container mx-auto px-4 pt-24 pb-48">
 
-                <h2 class="text-4xl font-bold text-center mb-8">{{ category.title }} [{{ category_i }},
-                    {{ categories.length }}]</h2>
+                <h2 class="text-4xl font-bold text-center mb-8">
+                    {{ category.title }}
+                </h2>
 
                 <!-- row -->
                 <div class="flex flex-col sm:flex-row sm:flex-wrap sm:-mx-2">
@@ -159,26 +162,62 @@
             <!-- container -->
             <div class="relative h-full container mx-auto px-4 py-12 text-center">
                 <p>
-                    <a href="http://discord.gg/tzdhgprV2R" class="text-logo-400 hover:underline transition-all duration-300" target="_blank">Matrix Roleplay</a> - Todos
-                    os
-                    direitos reservados.
+                    <a href="http://discord.gg/tzdhgprV2R"
+                        class="text-logo-400 hover:underline transition-all duration-300" target="_blank">Matrix
+                        Roleplay</a> - Todos os direitos reservados.
                 </p>
                 <p>
-                    Acesse nosso <a href="http://discord.gg/tzdhgprV2R" class="text-logo-400 hover:underline transition-all duration-300" target="_blank">Servidor do
-                        Discord</a>
+                    Acesse nosso <a href="http://discord.gg/tzdhgprV2R"
+                        class="text-logo-400 hover:underline transition-all duration-300" target="_blank">
+                        Servidor do Discord
+                    </a>
                 </p>
                 <p>
-                    Acesse aqui as nossas <a href="/regras" class="text-logo-400 hover:underline transition-all duration-300">regras</a>
+                    Acesse aqui as nossas <a href="/regras"
+                        class="text-logo-400 hover:underline transition-all duration-300">regras</a>
                 </p>
 
             </div>
             <!-- /.container -->
         </footer>
 
+        <!-- Modal Details -->
+        <div class="modal fixed z-10 inset-0 overflow-y-auto opacity-0 pointer-events-none" id="modalDetails">
+            <div class="min-h-screen p-4">
+                <div class="fixed inset-0 transition-opacity modal-overlay" aria-hidden="true">
+                    <div class="absolute inset-0 bg-gray-800 opacity-75"></div>
+                </div>
+
+                <div class="relative bg-discord-400 rounded-md shadow-xl sm:max-w-lg sm:mx-auto mb-12" role="dialog" aria-modal="true" aria-labelledby="modal-headline" >
+                    <div class="p-4">
+                        <h3 class="text-lg text-center leading-6 font-medium" id="modal-headline">
+                            {{ selectedProduct.title }}
+                        </h3>
+                    </div>
+
+                    <div class="p-4" v-html="selectedProduct.html"></div>
+
+                    <div class="p-4 flex flex-row-reverse">
+                        <button type="button" class="bg-transparent border border-logo-400 text-logo-400 px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-logo-400 hover:text-white" @click.prevent="closeDetails()">
+                            Fechar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.Modal Details -->
+
+        <!-- Loading -->
+        <div class="loading"><img src="/img/bg/loading-3.gif"></div>
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"
         integrity="sha512-BKbSR+cfyxLdMAsE0naLReFSLg8/pjbgfxHh/k/kUC82Hy7r6HtR5hLhobaln2gcTvzkyyehrdREdjpsQwy2Jw=="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
         crossorigin="anonymous"></script>
 
     <script>var categoriesJson = `<%- categoriesJson %>`;</script>

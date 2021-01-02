@@ -2,8 +2,8 @@ function generateStars(value, max) {
     if (typeof max == 'undefined') max = 5;
     const html = [];
 
-    for (let i = 0; i < value; i++) html.push('<span class="fa fa-star color-logo-2"></span>');
-    for (let i = value; i < max; i++) html.push('<span class="fa fa-star-o color-ds-3-dk-10"></span>');
+    for (let i = 0; i < value; i++) html.push('<span class="fa fa-star text-yellow-400"></span>');
+    for (let i = value; i < max; i++) html.push('<span class="fa fa-star-o text-discord-600"></span>');
 
     return html.join(' ');
 }

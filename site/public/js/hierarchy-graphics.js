@@ -169,14 +169,14 @@ function drawCharts() {
                 '',
                 '',
             ],
-            [
-                {
-                    'v': 'DIRETOR-INOVACAO',
-                    'f': 'DIRETOR INOVAÇÃO'
-                },
-                'DIRETORIA',
-                '',
-            ],
+            // [
+            //     {
+            //         'v': 'DIRETOR-INOVACAO',
+            //         'f': 'DIRETOR INOVAÇÃO'
+            //     },
+            //     'DIRETORIA',
+            //     '',
+            // ],
             [
                 {
                     'v': 'DIRETOR-DISCORD',
@@ -201,14 +201,14 @@ function drawCharts() {
                 'DIRETORIA',
                 '',
             ],
-            [
-                {
-                    'v': 'DIRETOR-INOVACAO-1',
-                    'f': 'Caique'
-                },
-                'DIRETOR-INOVACAO',
-                '',
-            ],
+            // [
+            //     {
+            //         'v': 'DIRETOR-INOVACAO-1',
+            //         'f': 'Caique'
+            //     },
+            //     'DIRETOR-INOVACAO',
+            //     '',
+            // ],
             [
                 {
                     'v': 'DIRETOR-DISCORD-1',
@@ -238,7 +238,6 @@ function drawCharts() {
             1,
             2,
             3,
-            4,
         ],
         [],
         [0]
@@ -251,39 +250,46 @@ function drawCharts() {
             id: 'SQUAD-A',
             name: 'TIME A',
             div: 'chart_div_squad_a',
-            manager: 'Antonio Olegário (Tony)',
+            manager: '🦊 Tony Bala | 12',
             lider: 'VAGO',
             mods_1: [
-                'Kalléu Vieira',
+                '🦅 Kalléu Vieira | 22',
             ],
             mods_2: [
-                'Pedro Gustavo',
+                '🦅 Cel. Gustavo | 89',
             ],
             mods_3: [
-                'Gabriel Solano (Solen)',
-                'Vinicius Cardoso (VN)',
+                '🦅 Gabriel Solen | 8',
+                '🦅 VN | 18',
+                '🦅 Katsuky | 246',
             ],
             sups_1: [],
             sups_2: [],
-            sups_3: [],
+            sups_3: [
+                '🦝 Delin | 695',
+                '🦝 Diego Gamer | 707',
+            ],
         },
         {
             id: 'SQUAD-B',
             name: 'TIME B',
             div: 'chart_div_squad_b',
-            manager: 'Bárbara Leite (Chuck Bass)',
+            manager: '🦊 Chuck Bass | 25',
             lider: 'VAGO',
             mods_1: [],
             mods_2: [],
             mods_3: [
-                'Gumema',
-                'Pedro Henrique (Pedrinho)',
-                'Pedro Henrique (Mario)',
-                'João Francisco (Tohke)',
+                '🦅 Gumema | 10',
+                '🦅 MataRindo | 7',
+                '🦅 Mario ᴰᵉˡᵃˢ | 11',
+                '🦅 [PM] Tohke | 156',
             ],
             sups_1: [],
             sups_2: [],
-            sups_3: [],
+            sups_3: [
+                '🦝 Andre cabelin | 710',
+                '🦝 Celular de Limão | 243',
+            ],
         },
     ];
 

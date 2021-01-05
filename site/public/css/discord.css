@@ -313,14 +313,24 @@ div.box-content > .inner > .body .markdown h3 {
   border-right: 4px solid #202225;
   border-radius: 8px;
 }
-div.box-content > .inner > .body .markdown > ol {
+div.box-content > .inner > .body .markdown > ol,
+div.box-content > .inner > .body .markdown > ul {
   margin-bottom: 60px;
 }
-div.box-content > .inner > .body .markdown > ol > li {
+div.box-content > .inner > .body .markdown > ol > li,
+div.box-content > .inner > .body .markdown > ul > li {
+  margin-bottom: 30px;
+}
+div.box-content > .inner > .body .markdown > ol > li ol,
+div.box-content > .inner > .body .markdown > ul > li ol,
+div.box-content > .inner > .body .markdown > ol > li ul,
+div.box-content > .inner > .body .markdown > ul > li ul {
   margin-bottom: 30px;
 }
 div.box-content > .inner > .body .markdown > ol > li ol li,
-div.box-content > .inner > .body .markdown > ol > li ul li {
+div.box-content > .inner > .body .markdown > ul > li ol li,
+div.box-content > .inner > .body .markdown > ol > li ul li,
+div.box-content > .inner > .body .markdown > ul > li ul li {
   color: #bbb;
 }
 div.box-content > .inner > .body .markdown b,

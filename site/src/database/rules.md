@@ -26,6 +26,8 @@
 
 1. As advertências serão aplicadas quando houver violação de qualquer uma das regras da cidade. Será aplicada uma **advertência**, cuja vigência será de 30 (trinta) dias corridos em tempo real (tempo de Nárnia). Havendo nova infração, em vigência da primeira **advertência**, será aplicada segunda **advertência**, com remoção de qualquer cargo que o advertido estiver exercendo, cuja vigência será de mais 30 (trinta) dias corridos em tempo real a partir da segunda **advertência**. Havendo nova infração no prazo de vigência da segunda **advertência** será aplicado **BANIMENTO** do mesmo;
 
+1. É proibído criar/usar qualquer outra regra que não esteja neste aqui, seja por parte dos jogadores quanto por parte da staff. **Somente as regras deste documento são oficiais.**
+
 ---
 
 ## REGRAS DO DISCORD
@@ -68,11 +70,25 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
 
     1. Não é permitido o uso de brechas no servidor para se beneficiar ou a terceiros, use o bom senso e preze pela sua diversão e dos outros;
 
+    1. Não é permitido o uso de informações de **dentro do RP** em locais/ocasiões que não sejam **dentro do RP**.
+
 1. A patir do momento que o jogador está com seu **personagem logado dentro da Cidade**, TODAS as ações do personagem deverão seguir o RP. Ou seja:
 
     - Carros quebrados não poderão trafegar antes de serem consertados;
     - Personagens machucados ou mortos deverão aguardar atendimento no local, não interferindo nas Ações caso elas estejam em andamento;
     - Policiais poderão prender suspeitos fora e dentro de Ações;
+
+### BUGS
+
+1. Este jogo não é a prova de falhas. Por isso, muitos bugs podem acontecer. Tendo ciencia disso, não será aceito o uso de nenhum bug para benefício prório. Caso seja provado o uso de algum bug, o jogador poderá ser **BANIDO** sem aviso prévio.
+
+1. Existe um bug chamado **"BUG PIXEL"**. Este bug permite que o jogador consiga atirar através da parede. É muito dificil pegar este bug no momento que ele acontece, pois não é necessário nenhum programa de terceiro para que ele funcione. Sabemos que ele pode deixar o RP "desbalanceado", mas não podemos resolver ele, por se tratar de um problema do próprio GTA. Logo, apenas receberemos reclamações deste bug se houverem provas reais. Reclamações sem provas reais serão ignoradas.
+
+### CHAT IN GAME
+
+1. É permitido usar comandos para conversar dentro do Cidade. Porém o comando **/frp** deve ser usado com cautela. Ele serve para falar de assuntos que são de **fora do RP**. Mas ele não deve ser usado para **"bater papo"**. Ele serve para **perguntas rápidas** ou **avisos**. O uso indevido deste comando resulta em **ADVERTÊNCIA**.
+
+1. Caso seja necessário conversar sobre qualquer **assunto/reclação** de qualquer Ação, devem usar os canais de **#CHAT** da categoria de **AÇÕES** do **Discord**.
 
 ### SAFE-ZONES E PROFISSÕES
 
@@ -273,6 +289,53 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
 
 1. Deve haver um intervalo mínimo de 1 hora entre cada ação;
 
+1. Todas as ações terão um tempo máximo de execução:
+
+    - Roubo de Caixa Registradora: **15 minutos**
+    - Lojinha: **20 minutos**
+    - Assalto a Banco: **30 minutos**
+    - Sequestro: **30 minutos**
+    - Assalta a Joalheria: **30 minutos**
+    - Invasão/Dominação: **1 hora**
+
+1. Toda ação que alcançar o tempo limite deverá ser encerrada. A Facção/Corporação que tiver a maior quantidade de membros vivos será a vencedora da ação. Em caso de empate, o Moderador que estiver acompanhando deverá dar mais **5 minutos** para finalizar a ação. Se mesmo após os 5 minutos houver empate, a ação será cancelada.
+
+1. Todas as ações deverão ter uma quantidade mínima e máxima de bandidos:
+
+    - Roubo de Caixa Registradora:
+        - Min: 1
+        - Max: 2
+
+    - Lojinha:
+        - Min: 2
+        - Max: 4
+
+    - Assalto a Banco:
+        - Min: 5
+        - Max: 7
+
+    - Sequestro:
+        - Min: 2
+        - Max: 5
+
+    - Assalta a Joalheria:
+        - Min: 4
+        - Max: 6
+
+    - Invasão/Dominação: **Segue regra abaixo sobre dominação**.
+
+1. A quantidade de policiais sempre deverá ser igual ou superior aos bandidos
+
+1. Caso uma facção não tenha membros **recrutados** o suficiente para realizar uma ação, ela pode **"emprestar"** membros (apenas de mais uma facção), até atingir a quantidade **MÍNIMA**. **Para emprestar membros de outra facção, é necessária a permissão do Lider desta outra facção.** Exemplos:
+
+    1. Exemplo 1: Uma Facção tem **8 membros recrutados**. Porém apenas **2 estão online** no momento e querem realizar um **assalto a joalheria**. Neste caso, como eles possuem mais de **4 membros recrutados** (que é o mínimo para a joalheria), eles **DEVEM** chamar esses membros para entrar na Cidade, e **NÃO PODEM** emprestar membros de outra facção.
+
+    1. Exemplo 2: Uma Facção tem **3 membros recrutados**. Porém apenas **2 estão online** no momento e querem realizar um **assalto a joalheria**. Neste caso, eles **DEVEM** chamar o membro que falta para dentro da Cidade, e **PODEM** recrutar mais **1 membro** de outra facção (para atingir o mínimo de 4 membros da joalheria).
+
+    1. Exemplo 3: Uma Facção tem **2 membros recrutados** e ambos os **2 estão online** e querem realizar um **assalto a joalheria**. Neste caso, como eles não tem mais membros recrutados para chamar, eles **PODEM** recrutar mais **2 membro** de outra facção (para atingir o mínimo de 4 membros da joalheria).
+
+1. Toda ação se inicia no momento que **a força policial aceita** a solicitação através do chat dentro do RP.
+
 1. Todas as ações DEVEM seguir o RP. Não havendo a interação adequada, poderá ser passível de anulação da mesma;
 
 1. **Sobre realizar ações repetidas:**
@@ -401,4 +464,4 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
 >
 > As regras contidas aqui não são opcionais. Devem ser seguidas para o bom RP de todos.
 
-`v2.2.0`
+`v2.3.0`

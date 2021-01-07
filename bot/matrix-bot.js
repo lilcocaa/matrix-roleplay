@@ -47,7 +47,7 @@ client.on('message', async message => {
     saveMessage(message);
 
     // comandos de debug
-    if (messageCommand == 'debug') {
+    if (messageCommand == process.env.COMMAND_DEBUG) {
         console.log('=> COMMAND: !debug');
         console.log(' - author:', author.id, author.username);
         console.log(' - channel:', channel.id, channel.name);
@@ -62,7 +62,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand == 'jobs') {
+    if (messageCommand == process.env.COMMAND_JOBS) {
         console.log('=> COMMAND: !jobs');
 
         (new Promise((resolve) => {
@@ -97,7 +97,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === 'clear') {
+    if (messageCommand === process.env.COMMAND_CLEAR) {
         console.log('=> COMMAND: !clear');
         console.log('-----------------------');
         fetched = await message.channel.messages.fetch({ limit: 100 });
@@ -119,7 +119,7 @@ client.on('message', async message => {
     }
 
     if (channel.id == process.env.DS_CHANNEL_WHITELIST) {
-        if (messageCommand === 'liberar') {
+        if (messageCommand === process.env.COMMAND_WHITELIST_RELEASE) {
             console.log('=> COMMAND: !liberar');
             console.log('-----------------------');
 
@@ -130,7 +130,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === 'bau-ajuda') {
+    if (messageCommand === process.env.COMMAND_CHEST_HELP) {
         console.log('=> COMMAND: !bau-ajuda');
         console.log('-----------------------');
 
@@ -153,7 +153,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === 'bau') {
+    if (messageCommand === process.env.COMMAND_CHEST_LIST) {
         console.log('=> COMMAND: !bau');
         console.log('-----------------------');
 
@@ -164,7 +164,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === 'bau-adicionar') {
+    if (messageCommand === process.env.COMMAND_CHEST_ADD) {
         console.log('=> COMMAND: !bau-adicionar');
         console.log('-----------------------');
 
@@ -175,7 +175,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === 'bau-remover') {
+    if (messageCommand === process.env.COMMAND_CHEST_REMOVE) {
         console.log('=> COMMAND: !bau-remover');
         console.log('-----------------------');
 
@@ -186,7 +186,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === 'bau-limpar') {
+    if (messageCommand === process.env.COMMAND_CHEST_CLEAR) {
         console.log('=> COMMAND: !bau-limpar');
         console.log('-----------------------');
 
@@ -196,6 +196,14 @@ client.on('message', async message => {
 
         return;
     }
+
+    /*
+    !bau-ajuda
+    !bau-adicionar 1 algema;1 colete balistico;1 combustivel 4500;11907 dinheiro sujo;1 galao de gasolina;4 glock;4 imbel;84 municao de glock;806 municao de imbel;300 municao de mp5;300 municao de uzi;11 paraquedas;4 radio;3 roupa;1 sig sauer
+    !bau-adicionar 1 mp5
+    !bau-adicionar 200 municao de mp5
+    !bau
+    */
 
 });
 

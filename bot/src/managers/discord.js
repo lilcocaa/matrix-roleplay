@@ -37,12 +37,15 @@ function getMessageVars(message) {
 }
 
 function sendMessage(to, title, body, color) {
-    // const response = new MessageEmbed()
-    //     .setTitle(title)
-    //     .setColor(color)
-    //     .setDescription(`${body}`);
-    // to.send(response);
     to.send(body);
+}
+
+function sendEmbedMessage(to, title, body, color) {
+    const response = new MessageEmbed()
+        .setTitle(title)
+        .setColor(color)
+        .setDescription(`${body}`);
+    to.send(response);
 }
 
 async function saveMessage(message) {
@@ -239,6 +242,7 @@ async function analyzeMessages() {
 module.exports = {
     getMessageVars,
     sendMessage,
+    sendEmbedMessage,
     saveMessage,
     analyzeMessages,
 };

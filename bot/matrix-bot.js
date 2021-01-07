@@ -7,9 +7,9 @@ const moment = require('moment');
 const { Client, MessageEmbed } = require('discord.js');
 const client = new Client();
 
-const { getMessageVars, sendMessage, saveMessage } = require('./src/managers/discord');
+const { getMessageVars, sendMessage, sendEmbedMessage, saveMessage } = require('./src/managers/discord');
 const { releaseWhitelist } = require('./src/managers/whitelist');
-
+const { showItemsChest, addItemChest, removeItemChest, clearChest } = require('./src/managers/chest');
 
 client.on('ready', async () => {
     const date = moment().format('DD/MM/YYYY HH:mm:ss');
@@ -129,6 +129,74 @@ client.on('message', async message => {
         message.delete();
         return;
     }
+
+    if (messageCommand === 'bau-ajuda') {
+        console.log('=> COMMAND: !bau-ajuda');
+        console.log('-----------------------');
+
+        const msg = [
+            '`!bau-ajuda` = Lista todos os comandos de baú.',
+
+            '`!bau` = Lista todos os itens do baú.',
+
+            '`!bau-adicionar` = Adiciona item no baú. Deve inserir a quantidade antes do nome do item. Pode informar mais de um item, separando por "virgula" ou "ponto e virgula"',
+
+            '`!bau-remover` = Remove item do baú. Deve inserir a quantidade antes do nome do item. Pode informar mais de um item, separando por "virgula" ou "ponto e virgula"',
+
+            '`!bau-limpar` = Remove TODOS os itens do baú!',
+        ];
+
+        sendEmbedMessage(channel, 'COMANDOS DE BAÚ', msg.join('\n\n'), 0x202225);
+
+        // message.delete();
+
+        return;
+    }
+
+    if (messageCommand === 'bau') {
+        console.log('=> COMMAND: !bau');
+        console.log('-----------------------');
+
+        showItemsChest(message);
+
+        // message.delete();
+
+        return;
+    }
+
+    if (messageCommand === 'bau-adicionar') {
+        console.log('=> COMMAND: !bau-adicionar');
+        console.log('-----------------------');
+
+        addItemChest(message);
+
+        // message.delete();
+
+        return;
+    }
+
+    if (messageCommand === 'bau-remover') {
+        console.log('=> COMMAND: !bau-remover');
+        console.log('-----------------------');
+
+        removeItemChest(message);
+
+        // message.delete();
+
+        return;
+    }
+
+    if (messageCommand === 'bau-limpar') {
+        console.log('=> COMMAND: !bau-limpar');
+        console.log('-----------------------');
+
+        clearChest(message);
+
+        // message.delete();
+
+        return;
+    }
+
 });
 
 client.login(process.env.BOT_TOKEN);

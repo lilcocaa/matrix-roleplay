@@ -17,7 +17,7 @@ function generateItens(content) {
                 return 'erro';
             }
 
-            return [parseInt(check[1]), check[2]];
+            return [parseInt(check[1]), check[2].toUpperCase()];
         })
         .filter(item => item.length);
 
@@ -124,11 +124,10 @@ async function showItemsChest(message, channelContentArray) {
     }
 
     const msg = [
-        `BAÚ`,
         channelContentArray.length ? channelContentArray.map(item => `- ${item.description}: **${item.amount}**`).join('\n') : `**Baú Vazio**`,
     ];
 
-    sendEmbedMessage(channel, '', msg.join('\n\n'), 0x0000ff);
+    sendEmbedMessage(channel, 'Baú', msg.join('\n\n'), 0x0000ff);
 }
 
 async function addItemChest(message) {
@@ -214,11 +213,11 @@ async function clearChest(message) {
 
     await saveChannelContent(guild, channel, {});
 
-    const msg = [
-        'Baú limpo com sucesso!',
-    ];
+    // const msg = [
+    //     'Baú limpo com sucesso!',
+    // ];
 
-    sendEmbedMessage(channel, '', msg.join('\n\n'), 0x00ff00);
+    // sendEmbedMessage(channel, '', msg.join('\n\n'), 0x00ff00);
     await showItemsChest(message);
 }
 

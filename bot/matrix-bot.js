@@ -1,13 +1,15 @@
 console.clear();
 
-require('dotenv-safe').config();
+require('dotenv-safe').config({
+    allowEmptyValues: true,
+});
 
 const moment = require('moment');
 
 const { Client, MessageEmbed } = require('discord.js');
 const client = new Client();
 
-const { getMessageVars, sendMessage, sendEmbedMessage, saveMessage } = require('./src/managers/discord');
+const { getMessageVars, sendMessage, sendEmbedMessage, saveMessage, checkCommand } = require('./src/managers/discord');
 const { releaseWhitelist } = require('./src/managers/whitelist');
 const { showItemsChest, addItemChest, removeItemChest, clearChest } = require('./src/managers/chest');
 
@@ -44,10 +46,11 @@ client.on('message', async message => {
     if (guild.id != process.env.DS_GUILD) return;
 
     // salvar todas as mensagens para log futuro
-    saveMessage(message);
+    if (process.env.ACTION_SAVE_MESSAGE_ACTIVED == 1) {
+        saveMessage(message);
+    }
 
-    // comandos de debug
-    if (messageCommand == process.env.COMMAND_DEBUG) {
+    if (checkCommand(message, 'DEBUG')) {
         console.log('=> COMMAND: !debug');
         console.log(' - author:', author.id, author.username);
         console.log(' - channel:', channel.id, channel.name);
@@ -62,7 +65,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand == process.env.COMMAND_JOBS) {
+    if (checkCommand(message, 'JOBS')) {
         console.log('=> COMMAND: !jobs');
 
         (new Promise((resolve) => {
@@ -97,7 +100,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === process.env.COMMAND_CLEAR) {
+    if (checkCommand(message, 'CLEAR')) {
         console.log('=> COMMAND: !clear');
         console.log('-----------------------');
         fetched = await message.channel.messages.fetch({ limit: 100 });
@@ -119,7 +122,7 @@ client.on('message', async message => {
     }
 
     if (channel.id == process.env.DS_CHANNEL_WHITELIST) {
-        if (messageCommand === process.env.COMMAND_WHITELIST_RELEASE) {
+        if (checkCommand(message, 'WHITELIST')) {
             console.log('=> COMMAND: !liberar');
             console.log('-----------------------');
 
@@ -130,7 +133,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === process.env.COMMAND_CHEST_HELP) {
+    if (checkCommand(message, 'CHEST_HELP')) {
         console.log('=> COMMAND: !bau-ajuda');
         console.log('-----------------------');
 
@@ -153,7 +156,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === process.env.COMMAND_CHEST_LIST) {
+    if (checkCommand(message, 'CHEST_LIST')) {
         console.log('=> COMMAND: !bau');
         console.log('-----------------------');
 
@@ -164,7 +167,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === process.env.COMMAND_CHEST_ADD) {
+    if (checkCommand(message, 'CHEST_ADD')) {
         console.log('=> COMMAND: !bau-adicionar');
         console.log('-----------------------');
 
@@ -175,7 +178,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === process.env.COMMAND_CHEST_REMOVE) {
+    if (checkCommand(message, 'CHEST_REMOVE')) {
         console.log('=> COMMAND: !bau-remover');
         console.log('-----------------------');
 
@@ -186,7 +189,7 @@ client.on('message', async message => {
         return;
     }
 
-    if (messageCommand === process.env.COMMAND_CHEST_CLEAR) {
+    if (checkCommand(message, 'CHEST_CLEAR')) {
         console.log('=> COMMAND: !bau-limpar');
         console.log('-----------------------');
 

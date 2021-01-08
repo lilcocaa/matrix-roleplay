@@ -1,5 +1,3 @@
-require('dotenv-safe').config();
-
 const knex = require('../database/connection');
 const { getMessageVars, sendMessage } = require('./discord');
 

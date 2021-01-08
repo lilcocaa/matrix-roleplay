@@ -31,8 +31,6 @@ async function getChannelContent(guild, channel) {
         .select('content')
         .first();
 
-    // console.log('dbContent', dbContent);
-
     if (!dbContent) {
         await knex('discord_chest')
             .insert({
@@ -43,7 +41,6 @@ async function getChannelContent(guild, channel) {
     }
 
     const channelContent = dbContent ? JSON.parse(dbContent.content) : {};
-    // console.log('channelContent', channelContent);
 
     return channelContent;
 }
@@ -119,12 +116,10 @@ async function showItemsChest(message, channelContentArray) {
     const {
         channel,
         guild,
-        messageContent,
     } = getMessageVars(message);
 
     if (typeof channelContentArray == 'undefined') {
         const channelContent = await getChannelContent(guild, channel);
-        console.log('channelContent', channelContent);
         channelContentArray = convertChannelContentToArray(channelContent);
     }
 
@@ -178,7 +173,6 @@ async function removeItemChest(message) {
     const {
         channel,
         guild,
-        messageContent,
         messageArgs,
     } = getMessageVars(message);
 
@@ -205,9 +199,6 @@ async function removeItemChest(message) {
     const channelContent = await getChannelContent(guild, channel);
     const mergedChannelContent = removeChannelContent(channelContent, items);
     const channelContentArray = convertChannelContentToArray(mergedChannelContent);
-    console.log('channelContent', channelContent);
-    console.log('mergedChannelContent', mergedChannelContent);
-    console.log('channelContentArray', channelContentArray);
 
     await showItemsChest(message, channelContentArray);
 

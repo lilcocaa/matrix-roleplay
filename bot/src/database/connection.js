@@ -1,4 +1,3 @@
-require('dotenv-safe').config();
 const knex = require('knex');
 
 const connection = knex({

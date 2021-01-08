@@ -122,7 +122,7 @@ client.on('message', async message => {
     }
 
     if (channel.id == process.env.DS_CHANNEL_WHITELIST) {
-        if (checkCommand(message, 'WHITELIST')) {
+        if (checkCommand(message, 'WHITELIST_RELEASE')) {
             console.log('=> COMMAND: !liberar');
             console.log('-----------------------');
 

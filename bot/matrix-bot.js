@@ -15,15 +15,14 @@ const knex = require('./src/database/connection');
 const { getMessageVars, sendMessage, sendEmbedMessage, saveMessage, checkCommand } = require('./src/managers/discord');
 const { releaseWhitelist } = require('./src/managers/whitelist');
 const { showItemsChest, addItemChest, removeItemChest, clearChest } = require('./src/managers/chest');
-const { expedientEnter, expedientLeft } = require('./src/managers/expedient');
+const { expedientEnter, expedientLeft, expedientActive } = require('./src/managers/expedient');
 
 client.on('ready', async () => {
 
 
-    // const initialDate = '2021-01-10 00:00:00';
-    // const finalDate = '2021-01-10 01:59:59';
+    // const initialDate = '2021-01-10 11:00:00';
+    // const finalDate = '2021-01-10 13:00:00';
     // const increment = [10, 'minutes'];
-
 
     // let initialMoment = moment(new Date(initialDate));
     // let finalMoment = moment(new Date(finalDate));
@@ -35,7 +34,7 @@ client.on('ready', async () => {
     //     let b = moment(a).add(increment[0], increment[1]).subtract(1, 'seconds');
     //     if (moment(b).isAfter(finalMoment)) b = moment(finalMoment);
 
-    //     let column = 'column_' + a.format('YYYYMMDDHHmmss') + '_' + b.format('YYYYMMDDHHmmss');
+    //     let column = 'column_' + a.format('YYYYMMDD_HHmmss') + '_' + b.format('YYYYMMDD_HHmmss');
 
     //     a = a.format('YYYY-MM-DD HH:mm:00');
     //     b = b.format('YYYY-MM-DD HH:mm:59');
@@ -46,9 +45,6 @@ client.on('ready', async () => {
     //     initialMoment.add(increment[0], increment[1]);
 
     // } while (!moment(initialMoment).isAfter(finalMoment));
-
-
-
 
     // const query = `
     //     SELECT
@@ -275,33 +271,34 @@ client.on('message', async message => {
         return;
     }
 
-    if (checkCommand(message, 'EXPEDIENT_ENTER')) {
-        console.log('=> COMMAND: !entrar');
-        console.log('-----------------------');
+    if (
+        channel.id == process.env.DS_CHANNEL_BOT_CONFIG
+        || channel.id == process.env.DS_CHANNEL_ADMINISTRACAO_BATER_PONTO
+    ) {
+        if (checkCommand(message, 'EXPEDIENT_ENTER')) {
+            console.log('=> COMMAND: !entrar');
+            console.log('-----------------------');
 
-        expedientEnter(message);
+            expedientEnter(message);
+        }
+
+        if (checkCommand(message, 'EXPEDIENT_EXIT')) {
+            console.log('=> COMMAND: !sair');
+            console.log('-----------------------');
+
+            expedientLeft(message);
+        }
+
+        if (checkCommand(message, 'EXPEDIENT_ACTIVE')) {
+            console.log('=> COMMAND: !ativos');
+            console.log('-----------------------');
+
+            expedientActive(message);
+        }
 
         message.delete();
         return;
     }
-
-    if (checkCommand(message, 'EXPEDIENT_EXIT')) {
-        console.log('=> COMMAND: !sair');
-        console.log('-----------------------');
-
-        expedientLeft(message);
-
-        message.delete();
-        return;
-    }
-
-    /*
-    !bau-ajuda
-    !bau-adicionar 1 algema;1 colete balistico;1 combustivel 4500;11907 dinheiro sujo;1 galao de gasolina;4 glock;4 imbel;84 municao de glock;806 municao de imbel;300 municao de mp5;300 municao de uzi;11 paraquedas;4 radio;3 roupa;1 sig sauer
-    !bau-adicionar 1 mp5
-    !bau-adicionar 200 municao de mp5
-    !bau
-    */
 
 });
 

@@ -2,6 +2,8 @@ const moment = require('moment');
 moment.locale('pt-br');
 moment.tz('America/Sao_Paulo');
 
+const utf8 = require('utf8');
+
 const knex = require('../database/connection');
 const { getMessageVars, sendEmbedMessage } = require('./discord');
 const { MessageEmbed } = require('discord.js');
@@ -122,7 +124,51 @@ async function expedientLeft(message) {
     return;
 }
 
+async function expedientActive(message) {
+    const {
+        member,
+        channel,
+        guild,
+    } = getMessageVars(message);
+
+    const query = `
+        SELECT
+            e.guild_id
+            , e.channel_id
+            , e.member_id
+            , g.name
+            , gc.name AS channel_name
+            , gm.username AS member_username
+            , gm.nickname AS member_nickname
+            , gm.avatar AS member_avatar
+        FROM discord_expedient e
+        LEFT JOIN discord_guilds g ON (e.guild_id = g.guild_id)
+        LEFT JOIN discord_guild_channels gc ON (e.guild_id = gc.guild_id AND e.channel_id = gc.channel_id)
+        LEFT JOIN discord_guild_members gm ON (e.guild_id = gm.guild_id AND e.member_id = gm.member_id)
+        WHERE e.deleted_at IS NULL
+        AND e.guild_id = ?
+        AND e.channel_id = ?
+        AND e.left_at IS NULL
+        GROUP BY e.member_id;
+    `;
+
+    const expedientActive = (await knex.raw(query, [guild.id, channel.id]))[0];
+
+    let msg = null;
+    let total = expedientActive.length;
+    if (!expedientActive.length) {
+        msg = ['Nenhum usuário ativo'];
+    } else {
+        msg = expedientActive.map(user => {
+            return '-> ' + utf8.decode(user.member_nickname ? user.member_nickname : user.member_username);
+        });
+    }
+
+    sendEmbedMessage(channel, `Usuários ativos (${total})`, msg.join('\n'), 0x202225);
+}
+
 module.exports = {
     expedientEnter,
     expedientLeft,
+    expedientActive,
 };

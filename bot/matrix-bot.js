@@ -4,16 +4,91 @@ require('dotenv-safe').config({
     allowEmptyValues: true,
 });
 
-const moment = require('moment');
+const moment = require('moment-timezone');
+moment.locale('pt-br');
+moment.tz('America/Sao_Paulo');
 
-const { Client, MessageEmbed } = require('discord.js');
+const { Client } = require('discord.js');
 const client = new Client();
+const knex = require('./src/database/connection');
 
 const { getMessageVars, sendMessage, sendEmbedMessage, saveMessage, checkCommand } = require('./src/managers/discord');
 const { releaseWhitelist } = require('./src/managers/whitelist');
 const { showItemsChest, addItemChest, removeItemChest, clearChest } = require('./src/managers/chest');
+const { expedientEnter, expedientLeft } = require('./src/managers/expedient');
 
 client.on('ready', async () => {
+
+
+    // const initialDate = '2021-01-10 00:00:00';
+    // const finalDate = '2021-01-10 01:59:59';
+    // const increment = [10, 'minutes'];
+
+
+    // let initialMoment = moment(new Date(initialDate));
+    // let finalMoment = moment(new Date(finalDate));
+
+    // const columns = [];
+    // const columnsSum = [];
+    // do {
+    //     let a = initialMoment;
+    //     let b = moment(a).add(increment[0], increment[1]).subtract(1, 'seconds');
+    //     if (moment(b).isAfter(finalMoment)) b = moment(finalMoment);
+
+    //     let column = 'column_' + a.format('YYYYMMDDHHmmss') + '_' + b.format('YYYYMMDDHHmmss');
+
+    //     a = a.format('YYYY-MM-DD HH:mm:00');
+    //     b = b.format('YYYY-MM-DD HH:mm:59');
+
+    //     columns.push(`COUNT(DISTINCT(IF (left_at >= '${a}' AND entered_at <= '${b}', member_id, NULL))) AS ${column}`);
+    //     columnsSum.push(`SUM(${column}) AS ${column}_sum`);
+
+    //     initialMoment.add(increment[0], increment[1]);
+
+    // } while (!moment(initialMoment).isAfter(finalMoment));
+
+
+
+
+    // const query = `
+    //     SELECT
+    //         guild_id,
+    //         channel_id,
+    //         ${columnsSum.join(', ')}
+    //     FROM (
+
+    //         SELECT
+    //             guild_id,
+    //             channel_id,
+    //             member_id,
+    //             COUNT(1) AS total,
+    //             ${columns.join(', ')}
+    //         FROM discord_expedient
+    //         WHERE deleted_at IS NULL
+
+    //         # AND guild_id = '765235242600103936'
+    //         # AND channel_id = '780243556509286430'
+
+    //         AND left_at >= '${initialDate}'
+    //         AND entered_at <= '${finalDate}'
+
+    //         GROUP BY guild_id, channel_id, member_id
+    //         ORDER BY entered_at
+
+    //     ) AS T
+    //     GROUP BY guild_id, channel_id
+    //     ;
+    // `;
+    // // console.log('query', query);
+
+    // const test = (await knex.raw(query))[0];
+
+    // console.log('test', test);
+    // console.log(`----------------------`);
+
+
+
+
     const date = moment().format('DD/MM/YYYY HH:mm:ss');
 
     console.log(`=> Bot iniciado em ${date}`);
@@ -197,6 +272,26 @@ client.on('message', async message => {
 
         // message.delete();
 
+        return;
+    }
+
+    if (checkCommand(message, 'EXPEDIENT_ENTER')) {
+        console.log('=> COMMAND: !entrar');
+        console.log('-----------------------');
+
+        expedientEnter(message);
+
+        message.delete();
+        return;
+    }
+
+    if (checkCommand(message, 'EXPEDIENT_EXIT')) {
+        console.log('=> COMMAND: !sair');
+        console.log('-----------------------');
+
+        expedientLeft(message);
+
+        message.delete();
         return;
     }
 

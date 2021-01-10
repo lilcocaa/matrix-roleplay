@@ -40,11 +40,16 @@ function sendMessage(to, title, body, color) {
     to.send(body);
 }
 
-function sendEmbedMessage(to, title, body, color) {
+function sendEmbedMessage(to, title, body, color, thumbnail) {
     const response = new MessageEmbed()
         .setTitle(title)
         .setColor(color)
         .setDescription(`${body}`);
+
+    if (thumbnail) {
+        response.setThumbnail(thumbnail)
+    }
+
     to.send(response);
 }
 
@@ -109,16 +114,16 @@ function checkCommand(message, command) {
     const channels = process.env[`COMMAND_${command}_CHANNELS`].split(';').map(item => item.trim()).filter(item => item.length);
 
     let ret = false;
+    let checkRole = false;
+    let checkChannel = false;
 
     if (isCommand) {
         if (actived) {
             if (messageCommand == value) {
 
-                let checkRole = false;
                 if (!roles.length) checkRole = true;
                 else checkRole = checkHasRole(member.roles.cache.map(role => role.id), roles);
 
-                let checkChannel = false;
                 if (!channels.length) checkChannel = true;
                 else checkChannel = channels.indexOf(channel.id) >= 0;
 

@@ -19,6 +19,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Middlaware de Retorno JSON
+app.use(require('./src/middlewares/json-return'));
+
 app.use(require('./src/routes'));
 
 // catch 404 and forward to error handler

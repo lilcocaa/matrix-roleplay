@@ -43,6 +43,150 @@
   src: url(https://fonts.gstatic.com/s/nunito/v16/XRXW3I6Li01BKofAnsSUYevI.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
+.bg-discord-200 {
+  background-color: #1E1D32;
+}
+.bg-discord-300 {
+  background-color: #1E1D32;
+}
+.bg-discord-400 {
+  background-color: #1E1D32;
+}
+.bg-discord-500 {
+  background-color: #1E1D32;
+}
+.bg-discord-600 {
+  background-color: #171627;
+}
+.bg-discord-700 {
+  background-color: #1E1D32;
+}
+.bg-discord-800 {
+  background-color: #111022;
+}
+.hover\:bg-discord-200:hover {
+  background-color: #1E1D32;
+}
+.hover\:bg-discord-300:hover {
+  background-color: #1E1D32;
+}
+.hover\:bg-discord-400:hover {
+  background-color: #1E1D32;
+}
+.hover\:bg-discord-500:hover {
+  background-color: #1E1D32;
+}
+.hover\:bg-discord-600:hover {
+  background-color: #171627;
+}
+.hover\:bg-discord-700:hover {
+  background-color: #1E1D32;
+}
+.hover\:bg-discord-800:hover {
+  background-color: #111022;
+}
+.text-discord-200 {
+  color: #1E1D32;
+}
+.text-discord-300 {
+  color: #1E1D32;
+}
+.text-discord-400 {
+  color: #1E1D32;
+}
+.text-discord-500 {
+  color: #1E1D32;
+}
+.text-discord-600 {
+  color: #171627;
+}
+.text-discord-700 {
+  color: #1E1D32;
+}
+.text-discord-800 {
+  color: #111022;
+}
+.hover\:text-discord-200:hover {
+  color: #1E1D32;
+}
+.hover\:text-discord-300:hover {
+  color: #1E1D32;
+}
+.hover\:text-discord-400:hover {
+  color: #1E1D32;
+}
+.hover\:text-discord-500:hover {
+  color: #1E1D32;
+}
+.hover\:text-discord-600:hover {
+  color: #171627;
+}
+.hover\:text-discord-700:hover {
+  color: #1E1D32;
+}
+.hover\:text-discord-800:hover {
+  color: #111022;
+}
+.border-discord-200 {
+  border-color: #1E1D32;
+}
+.border-discord-300 {
+  border-color: #1E1D32;
+}
+.border-discord-400 {
+  border-color: #1E1D32;
+}
+.border-discord-500 {
+  border-color: #1E1D32;
+}
+.border-discord-600 {
+  border-color: #171627;
+}
+.border-discord-700 {
+  border-color: #1E1D32;
+}
+.border-discord-800 {
+  border-color: #111022;
+}
+.hover\:border-discord-200:hover {
+  border-color: #1E1D32;
+}
+.hover\:border-discord-300:hover {
+  border-color: #1E1D32;
+}
+.hover\:border-discord-400:hover {
+  border-color: #1E1D32;
+}
+.hover\:border-discord-500:hover {
+  border-color: #1E1D32;
+}
+.hover\:border-discord-600:hover {
+  border-color: #171627;
+}
+.hover\:border-discord-700:hover {
+  border-color: #1E1D32;
+}
+.hover\:border-discord-800:hover {
+  border-color: #111022;
+}
+.bg-logo-400 {
+  background-color: #00BF00;
+}
+.hover\:bg-logo-400:hover {
+  background-color: #00BF00;
+}
+.text-logo-400 {
+  color: #00BF00;
+}
+.hover\:text-logo-400:hover {
+  color: #00BF00;
+}
+.border-logo-400 {
+  border-color: #00BF00;
+}
+.hover\:border-logo-400:hover {
+  border-color: #00BF00;
+}
 .font-nunito {
   font-family: 'Nunito', sans-serif;
 }
@@ -58,7 +202,7 @@ body::-webkit-scrollbar {
   height: 8px;
 }
 body::-webkit-scrollbar-track {
-  background-color: #202225;
+  background-color: #111022;
 }
 body::-webkit-scrollbar-corner {
   background-color: transparent;
@@ -135,8 +279,7 @@ body.modal-active {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #36393F;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAL0lEQVQYV2M0s7T//+rlMwZGBghgVFBS/Q/j/IcJgGTExKUYwCoVlVRBEmAAYgAA/gQNnlK88bUAAAAASUVORK5CYII=');
+  background-color: #1E1D32;
 }
 .loading img {
   position: fixed;

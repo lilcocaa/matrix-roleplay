@@ -51,7 +51,7 @@
 
     <div id="AppVue">
 
-        <header class="bg-discord-400 relative overflow-hidden sm:h-full sm:max-h-192">
+        <header class="bg-discord-400 relative overflow-hidden h-screen sm:max-h-192">
             <canvas id="c"></canvas>
             <div class="skewed bottom right bg-discord-600"></div>
 
@@ -64,20 +64,20 @@
                     <!-- col -->
                     <div class="flex-1 flex flex-col justify-center">
                         <div class="flex-initial text-center lg:text-left">
-                            <h1 class="text-4xl uppercase font-bold mb-8">
+                            <h1 class="text-4xl sm:text-6xl uppercase font-bold mb-8">
                                 Matrix <span class="text-logo-400">Roleplay</span>
                             </h1>
 
-                            <p class="text-lg uppercase font-thin mb-8">
-                                Servidor brasileiro com tema próprio de RPG baseado em GTA.
+                            <p class="text-lg sm:text-xl lg:text-2xl uppercase font-thin mb-8">
+                                <span class="text-yellow-400">Servidor brasileiro</span> com <span class="text-yellow-400">tema próprio</span> de RPG baseado em GTA.
                             </p>
 
-                            <p>
-                                <button
-                                    class="bg-logo-400 border border-logo-400 px-8 py-4 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400">
-                                    Conhecer Mais
-                                </button>
-                            </p>
+                            <!-- <p> -->
+                                <!-- <button -->
+                                    <!-- class="bg-logo-400 border border-logo-400 px-8 py-4 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400"> -->
+                                    <!-- Conhecer Mais -->
+                                <!-- </button> -->
+                            <!-- </p> -->
                         </div>
                     </div>
                     <!-- /.col -->
@@ -101,12 +101,12 @@
         <!-- Produtos -->
         <section class="relative overflow-hidden" v-for="(category, category_i) in categories" :class="{
             'bg-discord-600': category_i % 2 == 0,
-            'bg-discord-400': category_i % 2 == 1,
+            'bg-discord-800': category_i % 2 == 1,
         }">
             <div class="skewed bottom right" :class="{
-                'bg-discord-400': category_i != (categories.length - 1) && category_i % 2 == 0,
+                'bg-discord-800': category_i != (categories.length - 1) && category_i % 2 == 0,
                 'bg-discord-600': category_i != (categories.length - 1) && category_i % 2 == 1,
-                'bg-discord-800': category_i == (categories.length - 1),
+                'bg-discord-400': category_i == (categories.length - 1),
             }"></div>
 
             <!-- container -->
@@ -122,10 +122,10 @@
                     <!-- col -->
                     <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3" v-for="item in category.items">
                         <div
-                            class="h-full bg-discord-800 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
 
                             <div class="text-center">
-                                <img :src="item.image" alt="item.title" class="inline rounded-sm mb-12 max-w-full">
+                                <img :src="item.image" alt="item.title" class="inline rounded-md mb-12 max-w-full">
                             </div>
 
                             <h3 class="mb-4 text-yellow-400">
@@ -157,7 +157,7 @@
 
         </section>
 
-        <footer class="bg-discord-800">
+        <footer class="bg-discord-400">
 
             <!-- container -->
             <div class="relative h-full container mx-auto px-4 py-12 text-center">
@@ -188,7 +188,7 @@
                     <div class="absolute inset-0 bg-gray-800 opacity-75"></div>
                 </div>
 
-                <div class="relative bg-discord-400 rounded-md shadow-xl sm:max-w-lg sm:mx-auto mb-12" role="dialog" aria-modal="true" aria-labelledby="modal-headline" >
+                <div class="relative bg-discord-400 rounded-md shadow-xl sm:max-w-lg lg:max-w-2xl sm:mx-auto mb-12" role="dialog" aria-modal="true" aria-labelledby="modal-headline" >
                     <div class="p-4">
                         <h3 class="text-lg text-center leading-6 font-medium" id="modal-headline">
                             {{ selectedProduct.title }}

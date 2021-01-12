@@ -271,25 +271,30 @@ client.on('message', async message => {
         return;
     }
 
-    if (checkCommand(message, 'EXPEDIENT_ENTER')) {
-        console.log('=> COMMAND: !entrar');
-        console.log('-----------------------');
+    if (
+        channel.id == process.env.DS_CHANNEL_ADMINISTRACAO_BATER_PONTO
+        || channel.id == process.env.DS_CHANNEL_BOT_CONFIG
+    ) {
+        if (checkCommand(message, 'EXPEDIENT_ENTER')) {
+            console.log('=> COMMAND: !entrar');
+            console.log('-----------------------');
 
-        expedientEnter(message);
-    }
+            expedientEnter(message);
+        }
 
-    if (checkCommand(message, 'EXPEDIENT_EXIT')) {
-        console.log('=> COMMAND: !sair');
-        console.log('-----------------------');
+        if (checkCommand(message, 'EXPEDIENT_EXIT')) {
+            console.log('=> COMMAND: !sair');
+            console.log('-----------------------');
 
-        expedientLeft(message);
-    }
+            expedientLeft(message);
+        }
 
-    if (checkCommand(message, 'EXPEDIENT_ACTIVE')) {
-        console.log('=> COMMAND: !ativos');
-        console.log('-----------------------');
+        if (checkCommand(message, 'EXPEDIENT_ACTIVE')) {
+            console.log('=> COMMAND: !ativos');
+            console.log('-----------------------');
 
-        expedientActive(message);
+            expedientActive(message);
+        }
     }
 
     if (

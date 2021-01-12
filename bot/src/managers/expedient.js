@@ -139,12 +139,12 @@ async function expedientActive(message) {
             , g.name
             , gc.name AS channel_name
             , gm.username AS member_username
-            , gm.nickname AS member_nickname
+            , gm.nick AS member_nickname
             , gm.avatar AS member_avatar
         FROM discord_expedient e
         LEFT JOIN discord_guilds g ON (e.guild_id = g.guild_id)
-        LEFT JOIN discord_guild_channels gc ON (e.guild_id = gc.guild_id AND e.channel_id = gc.channel_id)
-        LEFT JOIN discord_guild_members gm ON (e.guild_id = gm.guild_id AND e.member_id = gm.member_id)
+        LEFT JOIN discord_channels gc ON (e.guild_id = gc.guild_id AND e.channel_id = gc.channel_id)
+        LEFT JOIN discord_members gm ON (e.guild_id = gm.guild_id AND e.member_id = gm.member_id)
         WHERE e.deleted_at IS NULL
         AND e.guild_id = ?
         AND e.channel_id = ?
@@ -152,7 +152,9 @@ async function expedientActive(message) {
         GROUP BY e.member_id;
     `;
 
-    const expedientActive = (await knex.raw(query, [guild.id, channel.id]))[0];
+    const args = [guild.id, channel.id];
+
+    const expedientActive = (await knex.raw(query, args))[0];
 
     let msg = null;
     let total = expedientActive.length;

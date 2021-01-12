@@ -3,7 +3,7 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVYKGVQ7N"></script>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VLVYKGVQ7N"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -37,168 +37,1057 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css"
         integrity="sha512-+WF6UMXHki/uCy0vATJzyA9EmAcohIQuwpNz0qEO+5UeE5ibPejMRdFuARSrl1trs3skqie0rY/gNiolfaef5w=="
-        crossorigin="anonymous" />
-
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" -->
-    <!-- integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+        crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
-        crossorigin="anonymous" />
+        crossorigin="anonymous">
 
-    <link rel="stylesheet" href="site2.css">
+    <link rel="stylesheet" href="colors.css">
+    <link rel="stylesheet" href="layout-novo.css">
 </head>
 
 <body class="text-white">
 
-    <header class="bg-discord-400 relative overflow-hidden sm:h-full sm:max-h-192">
-        <canvas id="c"></canvas>
-        <div class="skewed bottom right"></div>
-
-        <!-- container -->
-        <div class="relative container mx-auto h-full px-4 py-24">
-
-            <!-- row -->
-            <div class="h-full flex space-x-8">
-
-                <!-- col -->
-                <div class="flex-1 flex flex-col justify-center">
-                    <div class="flex-initial text-center lg:text-left">
-                        <h1 class="text-4xl uppercase font-bold mb-8">
-                            Matrix <span class="text-logo-400">Roleplay</span>
-                        </h1>
-
-                        <p class="text-lg uppercase font-thin mb-8">
-                            Adipisicing ut commodo sint mollit sit sint dolore nostrud ut.
-                        </p>
-
-                        <p>
-                            <button class="bg-logo-400 border border-logo-400 px-8 py-4 rounded-sm font-bold
-                            uppercase transition-all hover:bg-transparent hover:text-logo-400">
-                                Conhecer Mais
-                            </button>
-                        </p>
+    <div id="AppVue">
+        <header class="bg-discord-400 relative overflow-hidden h-screen sm:max-h-192">
+            <!-- <canvas id="c" height="979" width="940"></canvas> -->
+            <div class="skewed bottom right bg-discord-600"></div>
+            <div class="relative container mx-auto h-full px-4 py-24">
+                <div class="h-full flex space-x-8">
+                    <div class="flex-1 flex flex-col justify-center">
+                        <div class="flex-initial text-center lg:text-left">
+                            <h1 class="text-4xl sm:text-6xl uppercase font-bold mb-8">
+                                Matrix <span class="text-logo-400">Roleplay</span>
+                            </h1>
+                            <p class="text-lg sm:text-xl lg:text-2xl uppercase font-thin mb-8">
+                                <span class="text-yellow-400">Servidor brasileiro</span> com <span
+                                    class="text-yellow-400">tema próprio</span> de RPG baseado em GTA.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="hidden flex-1 lg:flex flex-col justify-center">
+                        <div class="text-right"><img src="img/favicon_io/android-chrome-512x512.png" alt=""
+                                class="inline w-80"></div>
                     </div>
                 </div>
-                <!-- /.col -->
-
-                <!-- col -->
-                <div class="hidden flex-1 lg:flex flex-col justify-center">
-                    <div class="text-right">
-                        <img src="img/favicon_io/android-chrome-512x512.png" alt="" class="inline w-96">
-                    </div>
-                </div>
-                <!-- /.col -->
-
             </div>
-            <!-- /.row -->
 
-        </div>
-        <!-- /.container -->
-
-    </header>
-
-    <!-- Planos VIPs -->
-    <section class="bg-discord-600 relative overflow-hidden">
-        <!-- <div class="skewed top left"></div> -->
-
-        <!-- container -->
-        <div class="relative h-full container mx-auto px-4 py-24">
-
-            <h2 class="text-4xl font-bold text-center mb-8">Planos VIPs</h2>
-
-            <!-- row -->
-            <div class="flex flex-col md:flex-row md:flex-wrap md:-mx-2">
-
-                <!-- col -->
-                <div class="pb-4 md:w-1/2 md:px-2 lg:w-1/4">
-                    <div class="h-full bg-discord-800 p-8 rounded-md text-center uppercase font-bold">
-
-                        <div class="text-center">
-                            <img src="img/vips/bronze-200.png" alt=""
-                                class="inline rounded-full mb-12 max-w-full">
-                        </div>
-
-                        <h3 class="text-xl mb-12 text-yellow-400">
-                            VIP Bronze
-                        </h3>
-
-                        <p>
-                            Desconto: <span class="text-yellow-400">25%</span>
-                        </p>
-                    </div>
+            <div class="fixed top-0 right-0 left-0 bg-red-400">
+                <div class="relative container mx-auto h-full px-4 py-4">
+                    <ul>
+                        <li><a href="#planos-vips">Planos VIPs</a></li>
+                        <li><a href="#carros-classe-b">Carros Classe B</a></li>
+                        <li><a href="#carros-classe-a">Carros Classe A</a></li>
+                        <li><a href="#motos">Motos</a></li>
+                        <li><a href="#vagas">Vagas</a></li>
+                        <li><a href="#dinheiro">Dinheiro</a></li>
+                        <li><a href="#salario">Salário</a></li>
+                    </ul>
                 </div>
-                <!-- /.col -->
-
-                <!-- col -->
-                <div class="pb-4 md:w-1/2 md:px-2 lg:w-1/4">
-                    <div class="h-full bg-discord-800 p-8 rounded-md text-center uppercase font-bold">
-
-                        <div class="text-center">
-                            <img src="img/vips/bronze-200.png" alt=""
-                                class="inline rounded-full mb-12 max-w-full">
-                        </div>
-
-                        <h3 class="text-xl mb-12 text-yellow-400">
-                            VIP Bronze
-                        </h3>
-
-                        <p>
-                            Desconto: <span class="text-yellow-400">25%</span>
-                        </p>
-                    </div>
-                </div>
-                <!-- /.col -->
-
-                <!-- col -->
-                <div class="pb-4 md:w-1/2 md:px-2 lg:w-1/4">
-                    <div class="h-full bg-discord-800 p-8 rounded-md text-center uppercase font-bold">
-
-                        <div class="text-center">
-                            <img src="img/vips/bronze-200.png" alt=""
-                                class="inline rounded-full mb-12 max-w-full">
-                        </div>
-
-                        <h3 class="text-xl mb-12 text-yellow-400">
-                            VIP Bronze
-                        </h3>
-
-                        <p>
-                            Desconto: <span class="text-yellow-400">25%</span>
-                        </p>
-                    </div>
-                </div>
-                <!-- /.col -->
-
-                <!-- col -->
-                <div class="pb-4 md:w-1/2 md:px-2 lg:w-1/4">
-                    <div class="h-full bg-discord-800 p-8 rounded-md text-center uppercase font-bold">
-
-                        <div class="text-center">
-                            <img src="img/vips/bronze-200.png" alt=""
-                                class="inline rounded-full mb-12 max-w-full">
-                        </div>
-
-                        <h3 class="text-xl mb-12 text-yellow-400">
-                            VIP Bronze
-                        </h3>
-
-                        <p>
-                            Desconto: <span class="text-yellow-400">25%</span>
-                        </p>
-                    </div>
-                </div>
-                <!-- /.col -->
-
             </div>
-            <!-- /.row -->
-
+        </header>
+        <section id="planos-vips" class="relative overflow-hidden bg-discord-600">
+            <div class="skewed bottom right bg-discord-800"></div>
+            <div class="relative h-full container mx-auto px-4 pt-24 pb-48">
+                <h2 class="text-4xl font-bold text-center mb-8">
+                    Planos VIPs
+                </h2>
+                <div class="flex flex-col sm:flex-row sm:flex-wrap sm:-mx-2">
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vips/bronze-200.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                VIP Bronze
+                            </h3>
+                            <p class="mb-12"><span>Desconto:</span>
+                                <!----> <span class="text-yellow-400">25%</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vips/prata-200.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                VIP Prata
+                            </h3>
+                            <p class="mb-12"><span>Desconto:</span>
+                                <!----> <span class="text-yellow-400">30%</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vips/ouro-200.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                VIP Ouro
+                            </h3>
+                            <p class="mb-12"><span>Desconto:</span>
+                                <!----> <span class="text-yellow-400">35%</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vips/platina-200.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                VIP Platina
+                            </h3>
+                            <p class="mb-12"><span>Desconto:</span>
+                                <!----> <span class="text-yellow-400">41%</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vips/diamante-200.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                VIP Diamante
+                            </h3>
+                            <p class="mb-12"><span>Desconto:</span>
+                                <!----> <span class="text-yellow-400">46%</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vips/obsidian-200.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                VIP Obsidian
+                            </h3>
+                            <p class="mb-12"><span>Desconto:</span>
+                                <!----> <span class="text-yellow-400">50%</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="carros-classe-b" class="relative overflow-hidden bg-discord-800">
+            <div class="skewed bottom right bg-discord-600"></div>
+            <div class="relative h-full container mx-auto px-4 pt-24 pb-48">
+                <h2 class="text-4xl font-bold text-center mb-8">
+                    Carros Classe B
+                </h2>
+                <div class="flex flex-col sm:flex-row sm:flex-wrap sm:-mx-2">
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip1/vip1-1-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                MB G 65
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 50,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip1/vip1-2-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                MB SL 65
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 50,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip1/vip1-3-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                MUSTANG RTR
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 50,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip1/vip1-4-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                NISSAN SKYLINE R34
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 50,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip1/vip1-5-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                AUDI Q820
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 50,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip1/vip1-6-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                TOYOTA CHR
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 50,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip1/vip1-7-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                TOYOTA SUPRA
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 50,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip1/vip1-8-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                AUDI RS6
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 50,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip1/vip1-9-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                DODGE CHARGER SRT
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 50,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="carros-classe-a" class="relative overflow-hidden bg-discord-600">
+            <div class="skewed bottom right bg-discord-800"></div>
+            <div class="relative h-full container mx-auto px-4 pt-24 pb-48">
+                <h2 class="text-4xl font-bold text-center mb-8">
+                    Carros Classe A
+                </h2>
+                <div class="flex flex-col sm:flex-row sm:flex-wrap sm:-mx-2">
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip2/vip2-1-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                MB AMG C63
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 75,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip2/vip2-2-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                NISSAN 370Z
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 75,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip2/vip2-3-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                NISSAN GTR
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 75,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip2/vip2-4-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                NISSAN GTR NISMO
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 75,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip2/vip2-5-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                PAGANI HUAYRA
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 75,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip2/vip2-6-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                TESLA PRIOR
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 75,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip2/vip2-7-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                BMW M3 F80
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 75,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip2/vip2-8-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                BMW M4 GTS
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 75,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip2/vip2-9-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                BMW I8
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 75,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip2/vip2-10-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                FERRARI 458 ITÁLIA
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 75,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/vip2/vip2-11-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                FORD MUSTANG
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 75,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="motos" class="relative overflow-hidden bg-discord-800">
+            <div class="skewed bottom right bg-discord-600"></div>
+            <div class="relative h-full container mx-auto px-4 pt-24 pb-48">
+                <h2 class="text-4xl font-bold text-center mb-8">
+                    Motos
+                </h2>
+                <div class="flex flex-col sm:flex-row sm:flex-wrap sm:-mx-2">
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/motos/moto-1-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                Yamaha MT-07
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 40,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/motos/moto-2-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                Yamaha R1
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 40,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/motos/moto-3-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                Yamaha Zinger R1
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 40,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/motos/moto-4-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                Zx 10R
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 40,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/motos/moto-5-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                CB500x
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 40,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/motos/moto-6-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                CB500F
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 40,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/veiculos/motos/moto-7-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                BMW R1250
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 40,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="vagas" class="relative overflow-hidden bg-discord-600">
+            <div class="skewed bottom right bg-discord-800"></div>
+            <div class="relative h-full container mx-auto px-4 pt-24 pb-48">
+                <h2 class="text-4xl font-bold text-center mb-8">
+                    Vagas
+                </h2>
+                <div class="flex flex-col sm:flex-row sm:flex-wrap sm:-mx-2">
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vaga-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                +1 Vaga
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 10,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vaga-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                +2 Vaga
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 19,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vaga-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                +3 Vaga
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 27,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vaga-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                +4 Vaga
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 34,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vaga-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                +5 Vaga
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 40,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vaga-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                +6 Vaga
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 45,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vaga-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                +7 Vaga
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 49,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vaga-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                +8 Vaga
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 52,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vaga-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                +9 Vaga
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 54,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/vaga-400-200.jpg" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                +10 Vaga
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 55,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="dinheiro" class="relative overflow-hidden bg-discord-800">
+            <div class="skewed bottom right bg-discord-600"></div>
+            <div class="relative h-full container mx-auto px-4 pt-24 pb-48">
+                <h2 class="text-4xl font-bold text-center mb-8">
+                    Dinheiro
+                </h2>
+                <div class="flex flex-col sm:flex-row sm:flex-wrap sm:-mx-2">
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 250.000 no jogo
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 10,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 500.000 no jogo
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 18,50</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 750.000 no jogo
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 25,50</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 1.000.000 no jogo
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 31,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 2.000.000 no jogo
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 56,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 4.000.000 no jogo
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 100,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="salario" class="relative overflow-hidden bg-discord-600">
+            <div class="skewed bottom right bg-discord-400"></div>
+            <div class="relative h-full container mx-auto px-4 pt-24 pb-48">
+                <h2 class="text-4xl font-bold text-center mb-8">
+                    Salário
+                </h2>
+                <div class="flex flex-col sm:flex-row sm:flex-wrap sm:-mx-2">
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 2.500 de salário
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 10,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 5.000 de salário
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 20,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 7.500 de salário
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 38,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 10.000 de salário
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 54,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 20.000 de salário
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 128,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                    <div class="pb-4 sm:w-1/2 sm:px-2 lg:w-1/3">
+                        <div
+                            class="h-full bg-discord-400 p-8 rounded-md text-center uppercase font-bold text-xl md:text-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div class="text-center"><img src="/img/dinheiro/money.png" alt="item.title"
+                                    class="inline rounded-md mb-12 max-w-full"></div>
+                            <h3 class="mb-4 text-yellow-400">
+                                $ 40.000 de salário
+                            </h3>
+                            <p class="mb-12">
+                                <!----> <span>Preço:</span> <span class="text-yellow-400">R$ 240,00</span></p>
+                            <p><button
+                                    class="bg-logo-400 border border-logo-400 block px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-transparent hover:text-logo-400 w-full">
+                                    Detalhes
+                                </button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="bg-discord-400">
+            <div class="relative h-full container mx-auto px-4 py-12 text-center">
+                <p><a href="http://discord.gg/tzdhgprV2R" target="_blank"
+                        class="text-logo-400 hover:underline transition-all duration-300">Matrix
+                        Roleplay</a> - Todos os direitos reservados.
+                </p>
+                <p>
+                    Acesse nosso <a href="http://discord.gg/tzdhgprV2R" target="_blank"
+                        class="text-logo-400 hover:underline transition-all duration-300">
+                        Servidor do Discord
+                    </a></p>
+                <p>
+                    Acesse aqui as nossas <a href="/regras"
+                        class="text-logo-400 hover:underline transition-all duration-300">regras</a></p>
+            </div>
+        </footer>
+        <div id="modalDetails" class="modal fixed z-10 inset-0 overflow-y-auto opacity-0 pointer-events-none">
+            <div class="min-h-screen p-4">
+                <div aria-hidden="true" class="fixed inset-0 transition-opacity modal-overlay">
+                    <div class="absolute inset-0 bg-gray-800 opacity-75"></div>
+                </div>
+                <div role="dialog" aria-modal="true" aria-labelledby="modal-headline"
+                    class="relative bg-discord-400 rounded-md shadow-xl sm:max-w-lg lg:max-w-2xl sm:mx-auto mb-12">
+                    <div class="p-4">
+                        <h3 id="modal-headline" class="text-lg text-center leading-6 font-medium">
+                            Titulo
+                        </h3>
+                    </div>
+                    <div class="p-4">Texto aqui!!!</div>
+                    <div class="p-4 flex flex-row-reverse"><button type="button"
+                            class="bg-transparent border border-logo-400 text-logo-400 px-4 py-2 rounded-sm font-bold uppercase transition-all duration-300 hover:bg-logo-400 hover:text-white">
+                            Fechar
+                        </button></div>
+                </div>
+            </div>
         </div>
-        <!-- /.container -->
+    </div>
 
-    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"
+        integrity="sha512-BKbSR+cfyxLdMAsE0naLReFSLg8/pjbgfxHh/k/kUC82Hy7r6HtR5hLhobaln2gcTvzkyyehrdREdjpsQwy2Jw=="
+        crossorigin="anonymous"></script>
 
-    <script src="matrix.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous"></script>
+
+    <script>var categoriesJson = `[{"title":"Planos VIPs","slug":"planos-vips","active":1,"showImage":1,"items":[{"code":"1001","title":"VIP Bronze","description":"&lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE NO ATO DA DOA&Ccedil;&Atilde;O ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 2.500 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;$ 250.000&lt;/li&gt; &lt;li&gt;Carro VIP Classe B&lt;/li&gt; &lt;li&gt;+1 vaga na garagem&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE EM TODAS AS RENOVA&Ccedil;&Otilde;ES ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 2.500 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== ENQUANTO FOR VIP, VOC&Ecirc; AINDA GANHA ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Tag de VIP&lt;/li&gt; &lt;li&gt;Test Drive para os novos ve&iacute;culos&lt;/li&gt; &lt;li&gt;Desconto exclusivo de 5% em qualquer outro item do site&lt;/li&gt; &lt;/ul&gt;","cost":"R$ 90,00","discount":"25%","price":"R$ 67,50","recurringPayment":"R$ 20,00","image":"/img/vips/bronze-200.png","active":1,"categorySlug":"planos-vips"},{"code":"1002","title":"VIP Prata","description":"&lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE NO ATO DA DOA&Ccedil;&Atilde;O ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 5.500 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;$ 550.000&lt;/li&gt; &lt;li&gt;Carro VIP Classe B&lt;/li&gt; &lt;li&gt;+2 vaga na garagem&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE EM TODAS AS RENOVA&Ccedil;&Otilde;ES ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 5.500 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== ENQUANTO FOR VIP, VOC&Ecirc; AINDA GANHA ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Tag de VIP&lt;/li&gt; &lt;li&gt;Test Drive para os novos ve&iacute;culos&lt;/li&gt; &lt;li&gt;Desconto exclusivo de 5% em qualquer outro item do site&lt;/li&gt; &lt;/ul&gt;","cost":"R$ 125,90","discount":"30%","price":"R$ 87,85","recurringPayment":"R$ 38,00","image":"/img/vips/prata-200.png","active":1,"categorySlug":"planos-vips"},{"code":"1003","title":"VIP Ouro","description":"&lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE NO ATO DA DOA&Ccedil;&Atilde;O ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 12.000 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;$ 1.200.000&lt;/li&gt; &lt;li&gt;Carro VIP Classe B&lt;/li&gt; &lt;li&gt;+4 vaga na garagem&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE EM TODAS AS RENOVA&Ccedil;&Otilde;ES ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 12.000 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== ENQUANTO FOR VIP, VOC&Ecirc; AINDA GANHA ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Tag de VIP&lt;/li&gt; &lt;li&gt;Test Drive para os novos ve&iacute;culos&lt;/li&gt; &lt;li&gt;Desconto exclusivo de 5% em qualquer outro item do site&lt;/li&gt; &lt;/ul&gt;","cost":"R$ 165,90","discount":"35%","price":"R$ 106,40","recurringPayment":"R$ 54,00","image":"/img/vips/ouro-200.png","active":1,"categorySlug":"planos-vips"},{"code":"1004","title":"VIP Platina","description":"&lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE NO ATO DA DOA&Ccedil;&Atilde;O ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 19.500 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;$ 1.950.000&lt;/li&gt; &lt;li&gt;Carro VIP Classe A&lt;/li&gt; &lt;li&gt;+6 vaga na garagem&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;li&gt;Limpa 1 ADV&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE EM TODAS AS RENOVA&Ccedil;&Otilde;ES ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 19.500 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;li&gt;Limpa 1 ADV&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== ENQUANTO FOR VIP, VOC&Ecirc; AINDA GANHA ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Tag de VIP&lt;/li&gt; &lt;li&gt;1 tag personalizada&lt;/li&gt; &lt;li&gt;Test Drive para os novos ve&iacute;culos&lt;/li&gt; &lt;li&gt;Desconto exclusivo de 5% em qualquer outro item do site&lt;/li&gt; &lt;/ul&gt;","cost":"R$ 275,00","discount":"41%","price":"R$ 161,40","recurringPayment":"R$ 68,00","image":"/img/vips/platina-200.png","active":1,"categorySlug":"planos-vips"},{"code":"1005","title":"VIP Diamante","description":"&lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE NO ATO DA DOA&Ccedil;&Atilde;O ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 28.000 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;$ 2.800.000&lt;/li&gt; &lt;li&gt;Carro VIP Classe A&lt;/li&gt; &lt;li&gt;Moto VIP&lt;/li&gt; &lt;li&gt;+8 vaga na garagem&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;li&gt;Limpa 2 ADV&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE EM TODAS AS RENOVA&Ccedil;&Otilde;ES ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 28.000 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;li&gt;Limpa 2 ADV&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== ENQUANTO FOR VIP, VOC&Ecirc; AINDA GANHA ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Tag de VIP&lt;/li&gt; &lt;li&gt;2 tag personalizada&lt;/li&gt; &lt;li&gt;Test Drive para os novos ve&iacute;culos&lt;/li&gt; &lt;li&gt;Desconto exclusivo de 5% em qualquer outro item do site&lt;/li&gt; &lt;/ul&gt;","cost":"R$ 472,20","discount":"46%","price":"R$ 253,55","recurringPayment":"R$ 128,00","image":"/img/vips/diamante-200.png","active":1,"categorySlug":"planos-vips"},{"code":"1006","title":"VIP Obsidian","description":"&lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE NO ATO DA DOA&Ccedil;&Atilde;O ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 45.000 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;$ 4.500.000&lt;/li&gt; &lt;li&gt;2 Carros VIP Classe A&lt;/li&gt; &lt;li&gt;2 Motos VIP&lt;/li&gt; &lt;li&gt;+10 vaga na garagem&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;li&gt;Remove Ban e todas ADV&#39;s&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== RECEBE EM TODAS AS RENOVA&Ccedil;&Otilde;ES ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Sal&aacute;rio de $ 45.000 a cada 40 minutos jogados (v&aacute;lido por 30 dias)&lt;/li&gt; &lt;li&gt;Limpa todos as multas acumuladas&lt;/li&gt; &lt;li&gt;Remove Ban e todas ADV&#39;s&lt;/li&gt; &lt;/ul&gt; &lt;h4 style=&quot;margin-bottom: 10px;&quot;&gt;=== ENQUANTO FOR VIP, VOC&Ecirc; AINDA GANHA ===&lt;/h4&gt; &lt;ul style=&quot;margin-bottom: 20px;&quot;&gt; &lt;li&gt;Tag de VIP&lt;/li&gt; &lt;li&gt;3 tag personalizada&lt;/li&gt; &lt;li&gt;Test Drive para os novos ve&iacute;culos&lt;/li&gt; &lt;li&gt;Desconto exclusivo de 5% em qualquer outro item do site&lt;/li&gt; &lt;/ul&gt;","cost":"R$ 861,00","discount":"50%","price":"R$ 422,50","recurringPayment":"R$ 240,00","image":"/img/vips/obsidian-200.png","active":1,"categorySlug":"planos-vips"}]},{"title":"Carros Classe B","slug":"carros-classe-b","active":1,"showImage":1,"items":[{"code":4001,"title":"MB G 65","description":"&lt;h3&gt;MB G 65&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 50,00","image":"/img/veiculos/vip1/vip1-1-400-200.jpg","active":1,"categorySlug":"carros-classe-b"},{"code":4003,"title":"MB SL 65","description":"&lt;h3&gt;MB SL 65&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 50,00","image":"/img/veiculos/vip1/vip1-2-400-200.jpg","active":1,"categorySlug":"carros-classe-b"},{"code":4006,"title":"MUSTANG RTR","description":"&lt;h3&gt;MUSTANG RTR&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 50,00","image":"/img/veiculos/vip1/vip1-3-400-200.jpg","active":1,"categorySlug":"carros-classe-b"},{"code":4010,"title":"NISSAN SKYLINE R34","description":"&lt;h3&gt;NISSAN SKYLINE R34&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 50,00","image":"/img/veiculos/vip1/vip1-4-400-200.jpg","active":1,"categorySlug":"carros-classe-b"},{"code":4015,"title":"AUDI Q820","description":"&lt;h3&gt;AUDI Q820&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 50,00","image":"/img/veiculos/vip1/vip1-5-400-200.jpg","active":1,"categorySlug":"carros-classe-b"},{"code":4021,"title":"TOYOTA CHR","description":"&lt;h3&gt;TOYOTA CHR&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 50,00","image":"/img/veiculos/vip1/vip1-6-400-200.jpg","active":1,"categorySlug":"carros-classe-b"},{"code":4028,"title":"TOYOTA SUPRA","description":"&lt;h3&gt;TOYOTA SUPRA&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 50,00","image":"/img/veiculos/vip1/vip1-7-400-200.jpg","active":1,"categorySlug":"carros-classe-b"},{"code":4036,"title":"AUDI RS6","description":"&lt;h3&gt;AUDI RS6&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 50,00","image":"/img/veiculos/vip1/vip1-8-400-200.jpg","active":1,"categorySlug":"carros-classe-b"},{"code":4045,"title":"DODGE CHARGER SRT","description":"&lt;h3&gt;DODGE CHARGER SRT&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 50,00","image":"/img/veiculos/vip1/vip1-9-400-200.jpg","active":1,"categorySlug":"carros-classe-b"}]},{"title":"Carros Classe A","slug":"carros-classe-a","active":1,"showImage":1,"items":[{"code":4046,"title":"MB AMG C63","description":"&lt;h3&gt;MB AMG C63&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 75,00","image":"/img/veiculos/vip2/vip2-1-400-200.jpg","active":1,"categorySlug":"carros-classe-a"},{"code":4048,"title":"NISSAN 370Z","description":"&lt;h3&gt;NISSAN 370Z&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 75,00","image":"/img/veiculos/vip2/vip2-2-400-200.jpg","active":1,"categorySlug":"carros-classe-a"},{"code":4051,"title":"NISSAN GTR","description":"&lt;h3&gt;NISSAN GTR&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 75,00","image":"/img/veiculos/vip2/vip2-3-400-200.jpg","active":1,"categorySlug":"carros-classe-a"},{"code":4055,"title":"NISSAN GTR NISMO","description":"&lt;h3&gt;NISSAN GTR NISMO&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 75,00","image":"/img/veiculos/vip2/vip2-4-400-200.jpg","active":1,"categorySlug":"carros-classe-a"},{"code":4060,"title":"PAGANI HUAYRA","description":"&lt;h3&gt;PAGANI HUAYRA&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 75,00","image":"/img/veiculos/vip2/vip2-5-400-200.jpg","active":1,"categorySlug":"carros-classe-a"},{"code":4066,"title":"TESLA PRIOR","description":"&lt;h3&gt;TESLA PRIOR&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Combust&iacute;vel &lt;/li&gt; &lt;/ul&gt;","price":"R$ 75,00","image":"/img/veiculos/vip2/vip2-6-400-200.jpg","active":1,"categorySlug":"carros-classe-a"},{"code":4073,"title":"BMW M3 F80","description":"&lt;h3&gt;BMW M3 F80&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 75,00","image":"/img/veiculos/vip2/vip2-7-400-200.jpg","active":1,"categorySlug":"carros-classe-a"},{"code":4081,"title":"BMW M4 GTS","description":"&lt;h3&gt;BMW M4 GTS&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 75,00","image":"/img/veiculos/vip2/vip2-8-400-200.jpg","active":1,"categorySlug":"carros-classe-a"},{"code":4090,"title":"BMW I8","description":"&lt;h3&gt;BMW I8&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 75,00","image":"/img/veiculos/vip2/vip2-9-400-200.jpg","active":1,"categorySlug":"carros-classe-a"},{"code":4100,"title":"FERRARI 458 ITÁLIA","description":"&lt;h3&gt;FERRARI 458 IT&Aacute;LIA&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 75,00","image":"/img/veiculos/vip2/vip2-10-400-200.jpg","active":1,"categorySlug":"carros-classe-a"},{"code":4111,"title":"FORD MUSTANG","description":"&lt;h3&gt;FORD MUSTANG&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Estabilidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 75,00","image":"/img/veiculos/vip2/vip2-11-400-200.jpg","active":1,"categorySlug":"carros-classe-a"}]},{"title":"Motos","slug":"motos","active":1,"showImage":1,"items":[{"code":4112,"title":"Yamaha MT-07","description":"&lt;h3&gt;Yamaha MT-07&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Torque &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 40,00","image":"/img/veiculos/motos/moto-1-400-200.jpg","active":1,"categorySlug":"motos"},{"code":4114,"title":"Yamaha R1","description":"&lt;h3&gt;Yamaha R1&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Torque &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 40,00","image":"/img/veiculos/motos/moto-2-400-200.jpg","active":1,"categorySlug":"motos"},{"code":4117,"title":"Yamaha Zinger R1","description":"&lt;h3&gt;Yamaha Zinger R1&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Torque &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 40,00","image":"/img/veiculos/motos/moto-3-400-200.jpg","active":1,"categorySlug":"motos"},{"code":4121,"title":"Zx 10R","description":"&lt;h3&gt;Zx 10R&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Torque &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 40,00","image":"/img/veiculos/motos/moto-4-400-200.jpg","active":1,"categorySlug":"motos"},{"code":4126,"title":"CB500x","description":"&lt;h3&gt;CB500x&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Torque &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 40,00","image":"/img/veiculos/motos/moto-5-400-200.jpg","active":1,"categorySlug":"motos"},{"code":4132,"title":"CB500F","description":"&lt;h3&gt;CB500F&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Torque &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 40,00","image":"/img/veiculos/motos/moto-6-400-200.jpg","active":1,"categorySlug":"motos"},{"code":4139,"title":"BMW R1250","description":"&lt;h3&gt;BMW R1250&lt;/h3&gt; &lt;ul&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Velocidade &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Torque &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; Prest&iacute;gio &lt;/li&gt; &lt;li&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star text-yellow-400&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; &lt;span class=&quot;fa fa-star-o text-discord-600&quot;&gt;&lt;/span&gt; Resist&ecirc;ncia &lt;/li&gt; &lt;/ul&gt;","price":"R$ 40,00","image":"/img/veiculos/motos/moto-7-400-200.jpg","active":1,"categorySlug":"motos"}]},{"title":"Vagas","slug":"vagas","active":1,"showImage":1,"items":[{"code":"8001","title":"+1 Vaga","description":"&lt;h3&gt;+1 Vaga&lt;/h3&gt; &lt;p&gt;Adicionar mais uma vaga (total 4 vagas)&lt;/p&gt;","price":"R$ 10,00","image":"/img/vaga-400-200.jpg","active":1,"categorySlug":"vagas"},{"code":"8002","title":"+2 Vaga","description":"&lt;h3&gt;+2 Vaga&lt;/h3&gt; &lt;p&gt;Adicionar mais uma vaga (total 5 vagas)&lt;/p&gt;","price":"R$ 19,00","image":"/img/vaga-400-200.jpg","active":1,"categorySlug":"vagas"},{"code":"8003","title":"+3 Vaga","description":"&lt;h3&gt;+3 Vaga&lt;/h3&gt; &lt;p&gt;Adicionar mais uma vaga (total 6 vagas)&lt;/p&gt;","price":"R$ 27,00","image":"/img/vaga-400-200.jpg","active":1,"categorySlug":"vagas"},{"code":"8004","title":"+4 Vaga","description":"&lt;h3&gt;+4 Vaga&lt;/h3&gt; &lt;p&gt;Adicionar mais uma vaga (total 7 vagas)&lt;/p&gt;","price":"R$ 34,00","image":"/img/vaga-400-200.jpg","active":1,"categorySlug":"vagas"},{"code":"8005","title":"+5 Vaga","description":"&lt;h3&gt;+5 Vaga&lt;/h3&gt; &lt;p&gt;Adicionar mais uma vaga (total 8 vagas)&lt;/p&gt;","price":"R$ 40,00","image":"/img/vaga-400-200.jpg","active":1,"categorySlug":"vagas"},{"code":"8006","title":"+6 Vaga","description":"&lt;h3&gt;+6 Vaga&lt;/h3&gt; &lt;p&gt;Adicionar mais uma vaga (total 9 vagas)&lt;/p&gt;","price":"R$ 45,00","image":"/img/vaga-400-200.jpg","active":1,"categorySlug":"vagas"},{"code":"8007","title":"+7 Vaga","description":"&lt;h3&gt;+7 Vaga&lt;/h3&gt; &lt;p&gt;Adicionar mais uma vaga (total 10 vagas)&lt;/p&gt;","price":"R$ 49,00","image":"/img/vaga-400-200.jpg","active":1,"categorySlug":"vagas"},{"code":"8008","title":"+8 Vaga","description":"&lt;h3&gt;+8 Vaga&lt;/h3&gt; &lt;p&gt;Adicionar mais uma vaga (total 11 vagas)&lt;/p&gt;","price":"R$ 52,00","image":"/img/vaga-400-200.jpg","active":1,"categorySlug":"vagas"},{"code":"8009","title":"+9 Vaga","description":"&lt;h3&gt;+9 Vaga&lt;/h3&gt; &lt;p&gt;Adicionar mais uma vaga (total 12 vagas)&lt;/p&gt;","price":"R$ 54,00","image":"/img/vaga-400-200.jpg","active":1,"categorySlug":"vagas"},{"code":"8010","title":"+10 Vaga","description":"&lt;h3&gt;+10 Vaga&lt;/h3&gt; &lt;p&gt;Adicionar mais uma vaga (total 13 vagas)&lt;/p&gt;","price":"R$ 55,00","image":"/img/vaga-400-200.jpg","active":1,"categorySlug":"vagas"}]},{"title":"Dinheiro","slug":"dinheiro","active":1,"showImage":1,"items":[{"code":"5001","title":"$ 250.000 no jogo","description":"&lt;h2&gt;$ 250.000 no jogo&lt;/h2&gt;","price":"R$ 10,00","image":"/img/dinheiro/money.png","active":1,"categorySlug":"dinheiro"},{"code":"5002","title":"$ 500.000 no jogo","description":"&lt;h2&gt;$ 500.000 no jogo&lt;/h2&gt;","price":"R$ 18,50","image":"/img/dinheiro/money.png","active":1,"categorySlug":"dinheiro"},{"code":"5003","title":"$ 750.000 no jogo","description":"&lt;h2&gt;$ 750.000 no jogo&lt;/h2&gt;","price":"R$ 25,50","image":"/img/dinheiro/money.png","active":1,"categorySlug":"dinheiro"},{"code":"5004","title":"$ 1.000.000 no jogo","description":"&lt;h2&gt;$ 1.000.000 no jogo&lt;/h2&gt;","price":"R$ 31,00","image":"/img/dinheiro/money.png","active":1,"categorySlug":"dinheiro"},{"code":"5005","title":"$ 2.000.000 no jogo","description":"&lt;h2&gt;$ 2.000.000 no jogo&lt;/h2&gt;","price":"R$ 56,00","image":"/img/dinheiro/money.png","active":1,"categorySlug":"dinheiro"},{"code":"5006","title":"$ 4.000.000 no jogo","description":"&lt;h2&gt;$ 4.000.000 no jogo&lt;/h2&gt;","price":"R$ 100,00","image":"/img/dinheiro/money.png","active":1,"categorySlug":"dinheiro"}]},{"title":"Salário","slug":"salario","active":1,"showImage":1,"items":[{"code":"6001","title":"$ 2.500 de salário","description":"&lt;h2&gt;$ 2.500 de sal&aacute;rio no jogo&lt;/h2&gt;","price":"R$ 10,00","image":"/img/dinheiro/money.png","active":1,"categorySlug":"salario"},{"code":"6002","title":"$ 5.000 de salário","description":"&lt;h2&gt;$ 5.000 de sal&aacute;rio no jogo&lt;/h2&gt;","price":"R$ 20,00","image":"/img/dinheiro/money.png","active":1,"categorySlug":"salario"},{"code":"6003","title":"$ 7.500 de salário","description":"&lt;h2&gt;$ 7.500 de sal&aacute;rio no jogo&lt;/h2&gt;","price":"R$ 38,00","image":"/img/dinheiro/money.png","active":1,"categorySlug":"salario"},{"code":"6004","title":"$ 10.000 de salário","description":"&lt;h2&gt;$ 10.000 de sal&aacute;rio no jogo&lt;/h2&gt;","price":"R$ 54,00","image":"/img/dinheiro/money.png","active":1,"categorySlug":"salario"},{"code":"6005","title":"$ 20.000 de salário","description":"&lt;h2&gt;$ 20.000 de sal&aacute;rio no jogo&lt;/h2&gt;","price":"R$ 128,00","image":"/img/dinheiro/money.png","active":1,"categorySlug":"salario"},{"code":"6006","title":"$ 40.000 de salário","description":"&lt;h2&gt;$ 40.000 de sal&aacute;rio no jogo&lt;/h2&gt;","price":"R$ 240,00","image":"/img/dinheiro/money.png","active":1,"categorySlug":"salario"}]}]`;</script>
+    <script src="layout-novo.js"></script>
+    <!-- <script src="matrix.js"></script> -->
+
+
 
 </body>
 

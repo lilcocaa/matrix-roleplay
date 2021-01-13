@@ -56,6 +56,49 @@ function sendMessage(message, type, error, time) {
     }
 }
 
+function dateDiff(initialDate, finalDate) {
+    if (initialDate > finalDate) {
+        var c = initialDate;
+        initialDate = finalDate;
+        finalDate = c;
+    }
+
+    const a = moment(initialDate);
+    const b = moment(finalDate);
+
+    let seconds = b.diff(a) / 1000;
+
+    let minutes = Math.floor(seconds / 60);
+    seconds -= minutes * 60;
+
+    let hours = Math.floor(minutes / 60);
+    minutes -= hours * 60;
+
+    let days = Math.floor(hours / 24);
+    hours -= days * 24;
+
+    const times = [];
+
+    times.push(`${seconds} segundo${seconds != 1 ? 's' : ''}`);
+
+    if (minutes) times.push(`${minutes} minuto${minutes != 1 ? 's' : ''}`);
+    if (hours) times.push(`${hours} hora${hours != 1 ? 's' : ''}`);
+    if (days) times.push(`${days} dia${days != 1 ? 's' : ''}`);
+
+    let ret = '';
+
+    if (times.length == 1) {
+        ret = times.join();
+    } else {
+        const reversedRet = times.reverse();
+        const last = reversedRet.pop();
+
+        ret = reversedRet.join(', ') + ' e ' + last;
+    }
+
+    return ret;
+}
+
 async function expedientEnter(message) {
     const {
         member,
@@ -137,14 +180,17 @@ async function expedientActive(message) {
             , e.channel_id
             , e.member_id
             , g.name
-            , gc.name AS channel_name
-            , gm.username AS member_username
-            , gm.nick AS member_nickname
-            , gm.avatar AS member_avatar
+            , c.name AS channel_name
+            , m.username AS member_username
+            , m.nick AS member_nickname
+            , e.entered_at
+            , GROUP_CONCAT(CONCAT(r.role_id, ';;', r.position, ';;', r.name) SEPARATOR '||') AS roles
         FROM discord_expedient e
-        LEFT JOIN discord_guilds g ON (e.guild_id = g.guild_id)
-        LEFT JOIN discord_channels gc ON (e.guild_id = gc.guild_id AND e.channel_id = gc.channel_id)
-        LEFT JOIN discord_members gm ON (e.guild_id = gm.guild_id AND e.member_id = gm.member_id)
+        INNER JOIN discord_guilds g ON (e.guild_id = g.guild_id)
+        INNER JOIN discord_channels c ON (e.guild_id = c.guild_id AND e.channel_id = c.channel_id)
+        INNER JOIN discord_members m ON (e.guild_id = m.guild_id AND e.member_id = m.member_id)
+        INNER JOIN discord_member_roles mr ON (m.guild_id = mr.guild_id AND m.member_id = mr.member_id)
+        INNER JOIN discord_roles r ON (mr.guild_id = r.guild_id AND mr.role_id = r.role_id)
         WHERE e.deleted_at IS NULL
         AND e.guild_id = ?
         AND e.channel_id = ?
@@ -154,15 +200,46 @@ async function expedientActive(message) {
 
     const args = [guild.id, channel.id];
 
-    const expedientActive = (await knex.raw(query, args))[0];
+    const expedientActive = ((await knex.raw(query, args))[0]).map(row => {
+        row.roles = row.roles
+            .split('||')
+            .map(role => {
+                const r = role.split(';;');
+                r[2] = utf8.decode(r[2]);
+                return r;
+            })
+            .sort(function (a, b) {
+                if (a[1] > b[1]) return -1;
+                if (a[1] < b[1]) return 1;
+                return 0;
+            });
+
+        row.member_username = utf8.decode(row.member_username);
+        row.member_nickname = utf8.decode(row.member_nickname);
+
+        row.role = row.roles.shift();
+
+        return row;
+    });
+
+    const sortedUsers = expedientActive.sort(function (a, b) {
+        if (a.role[1] > b.role[1]) return -1;
+        if (a.role[1] < b.role[1]) return 1;
+
+        if (a.member_nickname > b.member_nickname) return -1;
+        if (a.member_nickname < b.member_nickname) return 1;
+        return 0;
+    });
 
     let msg = null;
-    let total = expedientActive.length;
-    if (!expedientActive.length) {
+    let total = sortedUsers.length;
+    if (!sortedUsers.length) {
         msg = ['Nenhum usuário ativo'];
     } else {
-        msg = expedientActive.map(user => {
-            return '-> ' + utf8.decode(user.member_nickname ? user.member_nickname : user.member_username);
+        msg = sortedUsers.map(user => {
+            var diff = dateDiff(user.entered_at, moment(new Date()).format('YYYY-MM-DD HH:mm:ss'));
+            console.log('diff', diff);
+            return '-> ' + (user.member_nickname ? user.member_nickname : user.member_username) + ' \`há ' + diff + '\`';
         });
     }
 

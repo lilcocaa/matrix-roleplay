@@ -63,8 +63,58 @@
                 💥ʜɪᴇʀᴀʀqᴜɪᴀ
             </div>
             <div class="body" id="regras-markdown">
-                <iframe src="/hierarquia-graficos" frameborder="0"
-                    style="display: block; width: 100%; height: 100%;"></iframe>
+
+                <div class="markdown">
+                    <h3>Diretores</h3>
+                </div>
+
+                <table class="table table-bordered table-striped table-discord">
+                    <tbody>
+                        <tr>
+                            <th>Diretor Discord</th>
+                            <th>Diretor Game</th>
+                            <th>Diretor Donates</th>
+                        </tr>
+                        <tr>
+                            <td><%- members['436949125603393538'].nick %></td>
+                            <td><%- members['701606468901666856'].nick %></td>
+                            <td><%- members['319559280393060355'].nick %></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="markdown">
+                    <h3>Staff</h3>
+                </div>
+
+                <table class="table table-bordered table-striped table-discord">
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <% for (var i in squads) { %>
+                            <th><%- squads[i].name %></th>
+                            <% } %>
+                            <td></td>
+                        </tr>
+                        <% for (var j in levels) { %>
+                        <tr>
+                            <th width="200"><%- levels[j].name %></th>
+                            <% for (var i in squads) { %>
+                            <td width="250">
+                                <% for (var k in squads[i].levels[j].members) { %>
+                                <p>
+                                    <%- squads[i].levels[j].members[k][1] %>
+                                </p>
+                                <% } %>
+                            </td>
+                            <% } %>
+                            <td></td>
+                        </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+
+                <!-- <iframe src="/hierarquia-graficos" frameborder="0" style="display: block; width: 100%; height: 100%;"></iframe> -->
             </div>
         </div>
     </div>

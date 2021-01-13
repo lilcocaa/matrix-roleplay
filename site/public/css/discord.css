@@ -350,3 +350,18 @@ div.box-content > .inner > .body .markdown code {
 div.box-content > .inner > .body .markdown .header-anchor {
   color: #00BF00;
 }
+.table-discord,
+.table-discord > thead > tr,
+.table-discord > tbody > tr,
+.table-discord > thead > tr > th,
+.table-discord > tbody > tr > th,
+.table-discord > thead > tr > td,
+.table-discord > tbody > tr > td {
+  border-color: #202225;
+}
+.table-discord {
+  margin-bottom: 60px;
+}
+.table-discord > tbody > tr:nth-of-type(odd) {
+  background-color: #2F3136;
+}

@@ -250,48 +250,122 @@ function drawCharts() {
             id: 'SQUAD-A',
             name: 'TIME A',
             div: 'chart_div_squad_a',
-            manager: '🦊 Tony Bala | 12',
+            manager: 'Tony Bala | 12',
             lider: 'VAGO',
             mods_1: [
-                '🦅 Kalléu Vieira | 22',
+                'Kalléu Vieira | 22',
             ],
             mods_2: [
-                '🦅 Cel. Gustavo | 89',
+                'Tohke | 156', // *
             ],
             mods_3: [
-                '🦅 Gabriel Solen | 8',
-                '🦅 VN | 18',
-                '🦅 Katsuky | 246',
+                'Katsuky | 246',
             ],
-            sups_1: [],
-            sups_2: [],
+            sups_1: [
+                'VN | 18', // *
+            ],
+            sups_2: [
+                'Diego Gamer | 707', // *
+                'Delin | 695', // *
+            ],
             sups_3: [
-                '🦝 Delin | 695',
-                '🦝 Diego Gamer | 707',
             ],
         },
         {
             id: 'SQUAD-B',
             name: 'TIME B',
             div: 'chart_div_squad_b',
-            manager: '🦊 Chuck Bass | 25',
+            manager: 'Chuck Bass | 25',
             lider: 'VAGO',
             mods_1: [],
-            mods_2: [],
-            mods_3: [
-                '🦅 Gumema | 10',
-                '🦅 MataRindo | 7',
-                '🦅 Mario ᴰᵉˡᵃˢ | 11',
-                '🦅 [PM] Tohke | 156',
+            mods_2: [
+                'Gabriel Solen | 8', // *
+                'Cel. Gustavo | 89',
             ],
-            sups_1: [],
-            sups_2: [],
+            mods_3: [
+                'Gumema | 10',
+            ],
+            sups_1: [
+                // 'MataRindo | 7', // *
+                'Mario ᴰᵉˡᵃˢ | 11', // *
+            ],
+            sups_2: [
+                'CISKIM | 680', // *
+                'Andre cabelin | 710', // *
+            ],
             sups_3: [
-                '🦝 Andre cabelin | 710',
-                '🦝 Celular de Limão | 243',
+                'Celular de Limão | 243',
             ],
         },
     ];
+
+    /*
+
+    🦊 Tony Bala | 12
+
+    🦊 Chuck Bass | 25
+        - eh gente mto boa
+        - chama todos para entrar
+        - leva mto pro pessoal
+        - precisa aprender a se comunicar
+
+    🦅 Kalléu Vieira | 22
+        - menino bom
+        - um pouco ausente nos finais de semana
+
+    🦅 Gabriel Solen | 8 ++
+        - atende mto bem
+
+    🦅 [PM] Tohke | 156 ++
+        - joga bem
+        - participativo
+
+    🦝 Delin | 695 ++
+        - mto bom suporte
+        - bom jogador
+        - participativo
+
+    🦝 Diego Gamer | 707 ++
+        - mto bom suporte
+        - joga bem, e procura ajudar no jogo
+
+    🦝 Andre cabelin | 710 ++
+        - ajuda bastante
+        - joga bem
+
+    🦝 Celular de Limão | 243
+
+    🦝 CISKIM | 680 ++
+
+
+
+
+
+
+    🦅 Cel. Gustavo | 89
+        - atende bem
+        - mas reclama mto
+        - se acha chefe
+        - problemas com regras
+        - interfere em papeis q nao eh dele
+
+    🦅 Gumema | 10
+        - staff neutro
+        - jogador ausente
+
+    🦅 MataRindo | 7
+        - mtas adv
+        - super god
+
+    🦅 Mario ᴰᵉˡᵃˢ | 11
+        - o que é? onde vive? do que se alimenta?
+
+
+    🦅 Katsuky | 246
+        - muito ausente
+        - esteve um periodo fora
+
+    */
 
     for (var i in squads) {
         var rows = [];
@@ -314,7 +388,7 @@ function drawCharts() {
         rows.push([
             {
                 v: `${squads[i].id}-MANAGER`,
-                f: `GERENTE<div style="font-weight: bold;">${payments.manager}</div>`,
+                f: `🦊 GERENTE<div style="font-weight: bold;">${payments.manager}</div>`,
             },
             squads[i].id,
             '',
@@ -335,7 +409,7 @@ function drawCharts() {
         rows.push([
             {
                 v: `${squads[i].id}-MODERATORS`,
-                f: `MODERADORES`,
+                f: `🦅 MODERADORES`,
             },
             `${squads[i].id}-MANAGER-1`,
             '',
@@ -346,7 +420,7 @@ function drawCharts() {
         rows.push([
             {
                 v: `${squads[i].id}-LIDER`,
-                f: `LIDER<div style="font-weight: bold;">${payments.lider}</div>`,
+                f: `🦅 LIDER<div style="font-weight: bold;">${payments.lider}</div>`,
             },
             `${squads[i].id}-MODERATORS`,
             '',
@@ -367,7 +441,7 @@ function drawCharts() {
         rows.push([
             {
                 v: `${squads[i].id}-MODERATOR-1`,
-                f: `NV 1<div style="font-weight: bold;">${payments.mod_1}</div>`,
+                f: `🦅 NV 1<div style="font-weight: bold;">${payments.mod_1}</div>`,
             },
             `${squads[i].id}-LIDER-1`,
             '',
@@ -378,7 +452,7 @@ function drawCharts() {
         rows.push([
             {
                 v: `${squads[i].id}-MODERATOR-2`,
-                f: `NV 2<div style="font-weight: bold;">${payments.mod_2}</div>`,
+                f: `🦅 NV 2<div style="font-weight: bold;">${payments.mod_2}</div>`,
             },
             `${squads[i].id}-LIDER-1`,
             '',
@@ -389,7 +463,7 @@ function drawCharts() {
         rows.push([
             {
                 v: `${squads[i].id}-MODERATOR-3`,
-                f: `NV 3<div style="font-weight: bold;">${payments.mod_3}</div>`,
+                f: `🦅 NV 3<div style="font-weight: bold;">${payments.mod_3}</div>`,
             },
             `${squads[i].id}-LIDER-1`,
             '',
@@ -400,7 +474,7 @@ function drawCharts() {
         rows.push([
             {
                 v: `${squads[i].id}-SUPORTS`,
-                f: `SUPORTES`,
+                f: `🦝 SUPORTES`,
             },
             `${squads[i].id}-LIDER-1`,
             '',
@@ -411,7 +485,7 @@ function drawCharts() {
         rows.push([
             {
                 v: `${squads[i].id}-SUPORT-1`,
-                f: `NV 1<div style="font-weight: bold;">${payments.sup_1}</div>`,
+                f: `🦝 NV 1<div style="font-weight: bold;">${payments.sup_1}</div>`,
             },
             `${squads[i].id}-SUPORTS`,
             '',
@@ -422,7 +496,7 @@ function drawCharts() {
         rows.push([
             {
                 v: `${squads[i].id}-SUPORT-2`,
-                f: `NV 2<div style="font-weight: bold;">${payments.sup_2}</div>`,
+                f: `🦝 NV 2<div style="font-weight: bold;">${payments.sup_2}</div>`,
             },
             `${squads[i].id}-SUPORTS`,
             '',
@@ -433,7 +507,7 @@ function drawCharts() {
         rows.push([
             {
                 v: `${squads[i].id}-SUPORT-3`,
-                f: `NV 3<div style="font-weight: bold;">${payments.sup_3}</div>`,
+                f: `🦝 NV 3<div style="font-weight: bold;">${payments.sup_3}</div>`,
             },
             `${squads[i].id}-SUPORTS`,
             '',

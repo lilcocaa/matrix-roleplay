@@ -12,5 +12,6 @@ router.get('/site', (req, res) => {
     res.redirect('/');
 });
 router.use('/app', require('./controllers/app'));
+router.use('/api', require('./controllers/api'));
 
 module.exports = router;

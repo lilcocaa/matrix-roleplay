@@ -1,4 +1,76 @@
 const axios = require('axios');
+const knex = require('../database/connection');
+
+const postOauth2Token = async (code) => {
+    return new Promise((resolve, reject) => {
+        const url = `https://discord.com/api/oauth2/token`;
+
+        const data = new URLSearchParams({
+            client_id: process.env.CLIENT_ID,
+            client_secret: process.env.CLIENT_SECRET,
+            grant_type: 'authorization_code',
+            redirect_uri: process.env.CLIENT_REDIRECT_URI,
+            code: code,
+            scope: 'identify email guilds',
+        });
+
+        const headers = {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        };
+
+        axios.post(url, data, { headers })
+            .then(response => {
+                resolve(response.data);
+            })
+            .catch(error => {
+                reject(error.response.data);
+            });
+    });
+};
+
+const getUsersMe = async (token) => {
+    return new Promise((resolve, reject) => {
+        const url = `https://discord.com/api/users/@me`;
+
+        const headers = {
+            'authorization': `${token.token_type} ${token.access_token}`,
+        };
+
+        axios.get(url, { headers })
+            .then(response => {
+                resolve(response.data);
+            })
+            .catch(error => {
+                reject(error.response.data);
+            });
+    });
+};
+
+// async function getGuildMember(token, member_id) {
+//     return new Promise((resolve, reject) => {
+//         const url = `https://discord.com/api/guilds/${process.env.GUILD_ID}/members/${member_id}`;
+
+//         const headers = {
+//             // 'authorization': `${token.token_type} ${token.access_token}`,
+//             'authorization': `Bot ${process.env.BOT_TOKEN}`,
+//         };
+
+//         axios.get(url, { headers })
+//             .then(response => {
+//                 resolve(response.data);
+//             })
+//             .catch(error => {
+//                 reject(error.response.data);
+//             });
+//     });
+// };
+
+module.exports = {
+    postOauth2Token,
+    getUsersMe,
+    // getGuildMember,
+};
+
 
 // const {
 //     intToHex,
@@ -284,7 +356,7 @@ const axios = require('axios');
 //     } else return null;
 // };
 
-module.exports = {
+// module.exports = {
 //     getDiscordTokenData,
 //     getDiscordUserData,
 //     getDiscordUserGuilds,
@@ -296,4 +368,4 @@ module.exports = {
 //     getDiscordGuildMembers,
 //     formatMember,
 //     sortUserByRole,
-};
+// };

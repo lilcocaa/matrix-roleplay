@@ -17,10 +17,21 @@ var App = new Vue({
 
         init: function () {
             setTimeout(function () {
+
                 $('.loading').stop().animate({
                     opacity: 0,
                 }, 300, function () {
                     $('.loading').remove();
+                });
+
+                $(window).on("scroll", function () {
+                    // var scrollHeight = $(document).height();
+                    // var scrollPosition = $(window).height() + $(window).scrollTop();
+                    // console.log('scrollHeight', scrollHeight);
+                    // console.log('scrollPosition', scrollPosition);
+                    // if ((scrollHeight - scrollPosition) / scrollHeight === 0) {
+                    //     when scroll to bottom of the page
+                    // }
                 });
             }, 500);
         },

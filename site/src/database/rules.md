@@ -6,6 +6,19 @@
 
 1. Não será efetuada nenhuma venda de produtos, serviços, dentro da cidade, porém ficará a critério do usuário realizar doações para o servidor;
 
+1. Nenhum item adquirido por doação poderá ser negociado entre jogadores, **nem por dinheiro de verdade, e nem por dinheiro do RP**. O não cumprimento desta regra resulta no **BANIMENTO** imediato de todos os envolvidos.
+
+1. Não será permitido qualquer tipo de venda/negociação, por transações reais, de produtos dentro do Servidor. O não cumprimento desta regra resulta no **BANIMENTO** imediato de todos os envolvidos. Ex.:
+
+    - Vender itens do jogo por dinheiro de verdade: **NÃO PODE**
+    - Vender itens do jogo por dinheiro do RP: **PODE**
+
+1. Nosso servidor permite a divulgação de trabalhos externos entre nossos jogadores. Porém todos devem seguir as seguintes regras:
+
+    - É permitido divulgar os trabalhos apenas no canal **#🥂┃ᴘᴀʀᴄᴇʀɪᴀꜱ**;
+    - Caso haja interesse em contratar/comprar algum trabalho, isso deverá ser feito fora do Servidor (em privado);
+    - Estamos isentos de qualquer problema causado por essas divulgações e/ou contratações desses trabalhos.
+
 1. Qualquer pessoa é bem vinda no nosso servidor, porém nenhuma informação interna poderá ser divulgada fora dele (Cidade e Discord). O não cumprimento desta regra resulta no **BANIMENTO** imediato de todos os envolvidos;
 
 1. Em HIPÓTESE ALGUMA, será aceito atos de difamação, calúnia, desrespeito e ofensas, homofobia, preconceito, racismo, xenofobia, assédio sexual, pedofilia ou insinuações a estupro ou que viole a privacidade de alguém. Tais atos resultam em **BANIMENTO** sem aviso prévio;
@@ -40,7 +53,7 @@
 
 1. **Proibido utilizar QUALQUER canal para fins a qual não foi destinado**;
 
-1. Os canais **#INSTAGRAM**, **#TWITTER**, **#TINDER** e **#EMPREGOS** fazem parte do **roleplay** da cidade, ou seja, tudo que for publicado neles poderá ser usado **dentro do RP**.
+1. Os canais **#📸┃ɪɴꜱᴛᴀɢʀᴀᴍ**, **#📱┃ᴛᴡɪᴛᴛᴇʀ**, **#💌┃ᴛɪɴᴅᴇʀ** e **#💼┃ᴇᴍᴘʀᴇɢᴏꜱ** fazem parte do **roleplay** da cidade, ou seja, tudo que for publicado neles poderá ser usado **dentro do RP**.
 
 1. Ao logar na cidade você concorda que sua voz e imagem, poderão ser utilizados para a produção de videoclipes e materiais direcionados às redes sociais do servidor.
 
@@ -88,7 +101,7 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
 
 1. É permitido usar comandos para conversar dentro do Cidade. Porém o comando **/frp** deve ser usado com cautela. Ele serve para falar de assuntos que são de **fora do RP**. Mas ele não deve ser usado para **"bater papo"**. Ele serve para **perguntas rápidas** ou **avisos**. O uso indevido deste comando resulta em **ADVERTÊNCIA**.
 
-1. Caso seja necessário conversar sobre qualquer **assunto/reclação** de qualquer Ação, devem usar os canais de **#CHAT** da categoria de **AÇÕES** do **Discord**.
+1. Caso seja necessário conversar sobre qualquer **assunto/reclação** de qualquer Ação, devem usar os canais de **#🗣┃ᴄʜᴀᴛ** da categoria de **🔫🔹ACOES RP🔹🔫** do **Discord**.
 
 ### SAFE-ZONES E PROFISSÕES
 
@@ -167,7 +180,7 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
 
 1. Em perseguição, é extremamente proibido finalizar a fuga em locais de Safe-zone;
 
-1. A polícia não pode utilizar informações do **@anônimo** ou **#Deepweb**;
+1. A polícia não pode utilizar informações do **@anônimo** ou **#💊┃ᴅᴇᴇᴘ-ᴡᴇʙ**;
 
 ### SAMU
 
@@ -275,7 +288,7 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
 
 1. Usar máscaras lhe torna irreconhecível, porém o colocará em situação de ilegal, podendo ser abordado pela polícia;
 
-1. Informações contidas nos canais **#INSTAGRAM**, **#TWITTER**, **#OLX**, **#MANCHETES**, **#EMPREGOS**, **#TINDER** e **#EVENTOS** do Discord poderão ser usadas dentro do RP. **Informações dos demais canais não poderão ser usadas dentro do RP**.
+1. Informações contidas nos canais **#📸┃ɪɴꜱᴛᴀɢʀᴀᴍ**, **#📱┃ᴛᴡɪᴛᴛᴇʀ**, **#🚗┃ᴏʟx**, **#💼┃ᴇᴍᴘʀᴇɢᴏꜱ** e **#💌┃ᴛɪɴᴅᴇʀ** do Discord poderão ser usadas dentro do RP. **Informações dos demais canais não poderão ser usadas dentro do RP**.
 
 1. Extremamente proibido o uso de capacete balístico por civis;
 
@@ -427,7 +440,7 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
 
 1. De posse do Inquérito, o **Juíz** poderá emitir um **Mandado Judicial** caso ele conclua que o Inquérito é válido;
 
-1. O **Juíz** necessita da autorização do Prefeito para anexar o **Mandado Judicial** no canal **#PROCESSOS**;
+1. O **Juíz** necessita da autorização do Prefeito para anexar o **Mandado Judicial** no canal **#💼┃ᴘʀᴏᴄᴇꜱꜱᴏꜱ**;
 
 1. Todo Mandado Judicial entra em vigor **24 horas** (tempo de nárnia) apoś ser anexado, e terá um prazo de **72 horas** (tempo de nárnia) para ser executado;
 
@@ -439,11 +452,18 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
 
 1. Não será necessário haver um número igual de defensores e atacantes para iniciar uma Invasão/Dominação;
 
-1. É necessário que seja informado no **@ilegal** sobre o aviso da invasão com antecedência de aproximadamente 2 horas (tempo de nárnia);
+1. É necessário que seja informado no canal **#💀┃ɪɴᴠᴀꜱõᴇꜱ** sobre o aviso da invasão com antecedência de no mínimo **24 horas** (tempo de nárnia). Deve ser especificado:
+
+    - Quem vai invadir
+    - O morro que será invadido (Norte, Sul ou Centro)
+
+1. É necessário que seja informado no **@ilegal** sobre o aviso da invasão com antecedência de no mínimo **2 horas** (tempo de nárnia);
 
 1. A polícia não pode intervir na invasão.
 
 1. Facções aliadas podem ajudar tanto no ataque quanto na defesa.
+
+1. Para cancelar uma Invasão/Dominação, é necessário avisar no canal **#💀┃ɪɴᴠᴀꜱõᴇꜱ** e no **@ilegal** com pelo menos **2 horas** antes do início. Caso o cancelamento ocorra com menos de 2 horas para o início, a **Facção** que solicitou a **Invasão** será penalizada da seguinte forma: **Todos os membros dela serão Jurados de Morte (até que todos os membros sejam mortos, mas no máximo até 72 horas) pela Facção que iria receber a Invasão**.
 
 ### MAPA DA CIDADE
 
@@ -464,4 +484,4 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
 >
 > As regras contidas aqui não são opcionais. Devem ser seguidas para o bom RP de todos.
 
-`v2.3.0`
+`v2.4.0`

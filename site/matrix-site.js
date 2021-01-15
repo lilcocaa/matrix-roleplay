@@ -6,6 +6,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const expressLayouts = require('express-ejs-layouts');
 
 const app = express();
 
@@ -21,6 +22,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Middlaware de Retorno JSON
 app.use(require('./src/middlewares/json-return'));
+
+
+app.use('/app', expressLayouts);
+app.set('layout', 'app/layout');
 
 app.use(require('./src/routes'));
 

@@ -1,7 +1,7 @@
 module.exports = async (req, res) => {
     try {
         res.json({
-            status: 'ok',
+            user: res.locals.user,
         });
     } catch (err) {
         const ret = require('../../helpers/error-handler')(err, req.ret);

@@ -1,6 +1,7 @@
 const utf8 = require('utf8');
 const Discord = require('../helpers/discord');
 const knex = require('../database/connection');
+const { intToHex } = require('../helpers/helpers');
 
 module.exports = async (req, res, next) => {
     res.locals.me = await Discord.getUsersMe(req.cookies.token);
@@ -48,6 +49,8 @@ module.exports = async (req, res, next) => {
             roles: [],
         };
 
+        user.fullName = user.nick ? user.nick : user.username;
+
         for (let i in userData) {
             if (userData[i].role_id == process.env.DS_ROLE_DIRETOR) user.isDirector = true;
             if (userData[i].role_id == process.env.DS_ROLE_GERENTE) user.isManager = true;
@@ -56,7 +59,7 @@ module.exports = async (req, res, next) => {
                 role_id: userData[i].role_id,
                 name: utf8.decode(userData[i].role_name),
                 position: userData[i].role_position,
-                color: userData[i].role_color,
+                color: '#' + intToHex(userData[i].role_color),
             };
 
             user.roles.push(role);

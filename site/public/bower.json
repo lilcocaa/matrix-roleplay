@@ -1,0 +1,23 @@
+{
+  "name": "public",
+  "homepage": "https://github.com/fmlimao/matrix-roleplay",
+  "authors": [
+    "Leandro Macedo <leandro.dmacedo@jsl.com.br>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "admin-lte": "^2.4.0",
+    "bootstrap": "^3.3.7",
+    "vue": "^2.6.12",
+    "axios": "^0.21.0"
+  }
+}

@@ -1,3 +1,6 @@
 module.exports = async (req, res) => {
-    res.send(`<h1>Login</h1> <p><a href="${process.env.CLIENT_LOGIN_URI}">Login aqui</a></p>`);
+    res.render('app/login', {
+        layout: false,
+        clientLoginUri: process.env.CLIENT_LOGIN_URI,
+    });
 };

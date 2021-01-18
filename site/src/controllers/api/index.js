@@ -8,8 +8,12 @@ router.use(require('../../middlewares/api-check-user-auth'));
 router.get('/', require('./home'));
 router.get('/me', require('./me'));
 router.get('/staff', require('./staff/list'));
+router.get('/staff/:member_id/expedient', require('./staff/expedient'));
 
-router.use(require('../../middlewares/api-error-404'));
-router.use(require('../../middlewares/api-error-500'));
+// Erro 404 da aí
+router.use(require('./error-404'));
+
+// Erro 500 da aí
+router.use(require('./error-500'));
 
 module.exports = router;

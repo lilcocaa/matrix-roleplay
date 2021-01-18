@@ -1,4 +1,3 @@
-module.exports = async (req, res) => {
-    // a();
+module.exports = (req, res) => {
     res.render('app/staff/list');
 };

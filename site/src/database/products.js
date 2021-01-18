@@ -11,6 +11,7 @@ function generateStars(value, max) {
 const categories = {
     'planos-vips': {
         title: 'Planos VIPs',
+        slug: 'planos-vips',
         active: 1,
         showImage: 1,
         items: {
@@ -73,7 +74,7 @@ const categories = {
                         <li>Desconto exclusivo de 5% em qualquer outro item do site</li>
                     </ul>
                 `,
-                cost: 'R$ 126,40',
+                cost: 'R$ 125,90',
                 discount: '30%',
                 price: 'R$ 87,85',
                 recurringPayment: 'R$ 38,00',
@@ -106,7 +107,7 @@ const categories = {
                         <li>Desconto exclusivo de 5% em qualquer outro item do site</li>
                     </ul>
                 `,
-                cost: 'R$ 167,40',
+                cost: 'R$ 165,90',
                 discount: '35%',
                 price: 'R$ 106,40',
                 recurringPayment: 'R$ 54,00',
@@ -142,8 +143,8 @@ const categories = {
                         <li>Desconto exclusivo de 5% em qualquer outro item do site</li>
                     </ul>
                 `,
-                cost: 'R$ 278,00',
-                discount: '40%',
+                cost: 'R$ 275,00',
+                discount: '41%',
                 price: 'R$ 161,40',
                 recurringPayment: 'R$ 68,00',
                 image: '/img/vips/platina-200.png',
@@ -179,8 +180,8 @@ const categories = {
                         <li>Desconto exclusivo de 5% em qualquer outro item do site</li>
                     </ul>
                 `,
-                cost: 'R$ 480,20',
-                discount: '45%',
+                cost: 'R$ 472,20',
+                discount: '46%',
                 price: 'R$ 253,55',
                 recurringPayment: 'R$ 128,00',
                 image: '/img/vips/diamante-200.png',
@@ -216,7 +217,7 @@ const categories = {
                         <li>Desconto exclusivo de 5% em qualquer outro item do site</li>
                     </ul>
                 `,
-                cost: 'R$ 883,00',
+                cost: 'R$ 861,00',
                 discount: '50%',
                 price: 'R$ 422,50',
                 recurringPayment: 'R$ 240,00',
@@ -227,30 +228,162 @@ const categories = {
     },
     'carros-classe-b': {
         title: 'Carros Classe B',
+        slug: 'carros-classe-b',
         active: 1,
         showImage: 1,
         items: {},
     },
     'carros-classe-a': {
         title: 'Carros Classe A',
+        slug: 'carros-classe-a',
         active: 1,
         showImage: 1,
         items: {},
     },
     'motos': {
         title: 'Motos',
+        slug: 'motos',
         active: 1,
         showImage: 1,
         items: {},
     },
+    'vagas': {
+        title: 'Vagas',
+        slug: 'vagas',
+        active: 1,
+        showImage: 1,
+        items: {
+            '8001': {
+                code: '8001',
+                title: '+1 Vaga',
+                description: `
+                    <h3>+1 Vaga</h3>
+
+                    <p>Adicionar mais uma vaga (total 4 vagas)</p>
+                `,
+                price: 'R$ 10,00',
+                image: `/img/vaga-400-200.jpg`,
+                active: 1,
+            },
+            '8002': {
+                code: '8002',
+                title: '+2 Vaga',
+                description: `
+                    <h3>+2 Vaga</h3>
+
+                    <p>Adicionar mais uma vaga (total 5 vagas)</p>
+                `,
+                price: 'R$ 19,00',
+                image: `/img/vaga-400-200.jpg`,
+                active: 1,
+            },
+            '8003': {
+                code: '8003',
+                title: '+3 Vaga',
+                description: `
+                    <h3>+3 Vaga</h3>
+
+                    <p>Adicionar mais uma vaga (total 6 vagas)</p>
+                `,
+                price: 'R$ 27,00',
+                image: `/img/vaga-400-200.jpg`,
+                active: 1,
+            },
+            '8004': {
+                code: '8004',
+                title: '+4 Vaga',
+                description: `
+                    <h3>+4 Vaga</h3>
+
+                    <p>Adicionar mais uma vaga (total 7 vagas)</p>
+                `,
+                price: 'R$ 34,00',
+                image: `/img/vaga-400-200.jpg`,
+                active: 1,
+            },
+            '8005': {
+                code: '8005',
+                title: '+5 Vaga',
+                description: `
+                    <h3>+5 Vaga</h3>
+
+                    <p>Adicionar mais uma vaga (total 8 vagas)</p>
+                `,
+                price: 'R$ 40,00',
+                image: `/img/vaga-400-200.jpg`,
+                active: 1,
+            },
+            '8006': {
+                code: '8006',
+                title: '+6 Vaga',
+                description: `
+                    <h3>+6 Vaga</h3>
+
+                    <p>Adicionar mais uma vaga (total 9 vagas)</p>
+                `,
+                price: 'R$ 45,00',
+                image: `/img/vaga-400-200.jpg`,
+                active: 1,
+            },
+            '8007': {
+                code: '8007',
+                title: '+7 Vaga',
+                description: `
+                    <h3>+7 Vaga</h3>
+
+                    <p>Adicionar mais uma vaga (total 10 vagas)</p>
+                `,
+                price: 'R$ 49,00',
+                image: `/img/vaga-400-200.jpg`,
+                active: 1,
+            },
+            '8008': {
+                code: '8008',
+                title: '+8 Vaga',
+                description: `
+                    <h3>+8 Vaga</h3>
+
+                    <p>Adicionar mais uma vaga (total 11 vagas)</p>
+                `,
+                price: 'R$ 52,00',
+                image: `/img/vaga-400-200.jpg`,
+                active: 1,
+            },
+            '8009': {
+                code: '8009',
+                title: '+9 Vaga',
+                description: `
+                    <h3>+9 Vaga</h3>
+
+                    <p>Adicionar mais uma vaga (total 12 vagas)</p>
+                `,
+                price: 'R$ 54,00',
+                image: `/img/vaga-400-200.jpg`,
+                active: 1,
+            },
+            '8010': {
+                code: '8010',
+                title: '+10 Vaga',
+                description: `
+                    <h3>+10 Vaga</h3>
+
+                    <p>Adicionar mais uma vaga (total 13 vagas)</p>
+                `,
+                price: 'R$ 55,00',
+                image: `/img/vaga-400-200.jpg`,
+                active: 1,
+            },
+        },
+    },
     'dinheiro': {
         title: 'Dinheiro',
+        slug: 'dinheiro',
         active: 1,
         showImage: 1,
         items: {
             '5001': {
                 code: '5001',
-                title: '$ 250.000',
+                title: '$ 250.000 no jogo',
                 description: '<h2>$ 250.000 no jogo</h2>',
                 price: 'R$ 10,00',
                 image: '/img/dinheiro/money.png',
@@ -258,7 +391,7 @@ const categories = {
             },
             '5002': {
                 code: '5002',
-                title: '$ 500.000',
+                title: '$ 500.000 no jogo',
                 description: '<h2>$ 500.000 no jogo</h2>',
                 price: 'R$ 18,50',
                 image: '/img/dinheiro/money.png',
@@ -266,7 +399,7 @@ const categories = {
             },
             '5003': {
                 code: '5003',
-                title: '$ 750.000',
+                title: '$ 750.000 no jogo',
                 description: '<h2>$ 750.000 no jogo</h2>',
                 price: 'R$ 25,50',
                 image: '/img/dinheiro/money.png',
@@ -274,7 +407,7 @@ const categories = {
             },
             '5004': {
                 code: '5004',
-                title: '$ 1.000.000',
+                title: '$ 1.000.000 no jogo',
                 description: '<h2>$ 1.000.000 no jogo</h2>',
                 price: 'R$ 31,00',
                 image: '/img/dinheiro/money.png',
@@ -282,7 +415,7 @@ const categories = {
             },
             '5005': {
                 code: '5005',
-                title: '$ 2.000.000',
+                title: '$ 2.000.000 no jogo',
                 description: '<h2>$ 2.000.000 no jogo</h2>',
                 price: 'R$ 56,00',
                 image: '/img/dinheiro/money.png',
@@ -290,9 +423,65 @@ const categories = {
             },
             '5006': {
                 code: '5006',
-                title: '$ 4.000.000',
+                title: '$ 4.000.000 no jogo',
                 description: '<h2>$ 4.000.000 no jogo</h2>',
                 price: 'R$ 100,00',
+                image: '/img/dinheiro/money.png',
+                active: 1,
+            },
+        },
+    },
+    'salario': {
+        title: 'Salário',
+        slug: 'salário',
+        active: 1,
+        showImage: 1,
+        items: {
+            '6001': {
+                code: '6001',
+                title: '$ 2.500 de salário',
+                description: '<h2>$ 2.500 de salário no jogo</h2>',
+                price: 'R$ 10,00',
+                image: '/img/dinheiro/money.png',
+                active: 1,
+            },
+            '6002': {
+                code: '6002',
+                title: '$ 5.000 de salário',
+                description: '<h2>$ 5.000 de salário no jogo</h2>',
+                price: 'R$ 20,00',
+                image: '/img/dinheiro/money.png',
+                active: 1,
+            },
+            '6003': {
+                code: '6003',
+                title: '$ 7.500 de salário',
+                description: '<h2>$ 7.500 de salário no jogo</h2>',
+                price: 'R$ 38,00',
+                image: '/img/dinheiro/money.png',
+                active: 1,
+            },
+            '6004': {
+                code: '6004',
+                title: '$ 10.000 de salário',
+                description: '<h2>$ 10.000 de salário no jogo</h2>',
+                price: 'R$ 54,00',
+                image: '/img/dinheiro/money.png',
+                active: 1,
+            },
+            '6005': {
+                code: '6005',
+                title: '$ 20.000 de salário',
+                description: '<h2>$ 20.000 de salário no jogo</h2>',
+                price: 'R$ 128,00',
+                image: '/img/dinheiro/money.png',
+                active: 1,
+            },
+            '6006': {
+                code: '6006',
+                title: '$ 40.000 de salário',
+                description: '<h2>$ 40.000 de salário no jogo</h2>',
+                price: 'R$ 240,00',
                 image: '/img/dinheiro/money.png',
                 active: 1,
             },

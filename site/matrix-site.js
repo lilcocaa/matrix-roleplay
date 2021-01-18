@@ -1,7 +1,6 @@
 console.clear();
 require('dotenv-safe').config();
 
-const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
@@ -23,17 +22,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middlaware de Retorno JSON
 app.use(require('./src/middlewares/json-return'));
 
-
+// Setando o layout do app
 app.use('/app', expressLayouts);
 app.set('layout', 'app/layout');
 
+// Arquivos de rotas
 app.use(require('./src/routes'));
-
-// catch 404 and forward to error handler
-app.use(require('./src/middlewares/error-404-middleware'));
-
-// error handler
-app.use(require('./src/middlewares/error-500-middleware'));
 
 var port = process.env.APP_PORT;
 

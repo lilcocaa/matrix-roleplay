@@ -8,6 +8,7 @@ async function getSquads() {
     , sn.level_id
     , s.name AS 'squad_name'
     , sn.name AS 'level_name'
+    , sn.salary AS 'level_salary'
     , GROUP_CONCAT(CONCAT(m.member_id, ';;', m.nick) SEPARATOR '||') AS 'members'
     FROM discord_squads s
     CROSS JOIN discord_squad_level sn
@@ -28,6 +29,7 @@ async function getSquads() {
             level_id,
             squad_name,
             level_name,
+            level_salary,
             members,
         } = c;
 
@@ -35,6 +37,7 @@ async function getSquads() {
             a.levels[level_id] = {
                 id: level_id,
                 name: level_name,
+                salary: level_salary,
             };
         }
 

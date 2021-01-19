@@ -5,7 +5,7 @@
         <i class="fa fa-users"></i> Staff
     </h1>
     <ol class="breadcrumb">
-        <li><a href="#">Home</a></li>
+        <li><a href="/app">Home</a></li>
         <li class="active"><i class="fa fa-users"></i> Staff</li>
     </ol>
 </section>
@@ -39,16 +39,17 @@
                         <th width="300">Staff</th>
                         <th width="150">Cargo</th>
                         <th width="150">Online</th>
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="staff in staffs.list">
                         <td>
-                            <img :src="staff.avatar" :alt="staff.nick" class="img-thumbnail img-rounded" style="max-width: 50px;">
+                            <img :src="staff.avatar" :alt="staff.nick" class="img-rounded" style="max-width: 32px;">
                         </td>
                         <td>
-                            {{ staff.nick }}
+                            <a :href="'/app/staff/' + staff.member_id">
+                                {{ staff.nick }}
+                            </a>
                         </td>
                         <td>
                             <span
@@ -65,12 +66,6 @@
                         <td>
                             <span class="label label-success" v-if="staff.online">Sim</span>
                             <span class="label label-danger" v-if="!staff.online">Não</span>
-                        </td>
-                        <td class="text-right">
-                            <a :href="'/app/staff/' + staff.member_id + '/expedient'" class="btn btn-default btn-xs" target="_blank">
-                                Ver ponto
-                                <span class="fa fa-external-link"></span>
-                            </a>
                         </td>
                     </tr>
                 </tbody>

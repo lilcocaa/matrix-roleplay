@@ -41,6 +41,7 @@
         integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
         crossorigin="anonymous" />
     <link rel="stylesheet" href="/css/discord.css">
+    <link rel="stylesheet" href="/css/colors.css">
 </head>
 
 <body>
@@ -98,7 +99,13 @@
                         </tr>
                         <% for (var j in levels) { %>
                         <tr>
-                            <th width="200"><%- levels[j].name %></th>
+                            <th width="200">
+                                <%- levels[j].name %>
+                                <br>
+                                <small class="text-logo-400">
+                                    <%- levels[j].salary %>
+                                </small>
+                            </th>
                             <% for (var i in squads) { %>
                             <td width="250">
                                 <% for (var k in squads[i].levels[j].members) { %>

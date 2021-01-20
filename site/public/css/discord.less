@@ -433,3 +433,26 @@ div.box-content {
 .table-discord>tbody>tr:nth-of-type(odd) {
     background-color: @color-ds-2;
 }
+
+.table-responsive {
+    border-color: @color-ds-1;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: @color-ds-2;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: @color-ds-1;
+        border-radius: 4px;
+    }
+}

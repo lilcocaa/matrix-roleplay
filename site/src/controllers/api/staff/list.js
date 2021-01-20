@@ -5,54 +5,48 @@ const { intToHex } = require('../../../helpers/helpers');
 module.exports = async (req, res) => {
     try {
         const ret = req.ret;
+
         const query = `
             SELECT
-                mrp.guild_id
-                , mrp.member_id
-                , mrp.username
-                , mrp.nick
-                , mrp.player_id
-                , mrp.discriminator
-                , mrp.avatar
-                , r.role_id
-                , r.name AS role_name
-                , r.color AS role_color
-                , GROUP_CONCAT(CONCAT(r2.role_id, ';;', r2.position, ';;', r2.name, ';;', r2.color) SEPARATOR '||') AS roles
+                hg.group_id
+                , hs.squad_id
+                , hl.level_id
+                , m.member_id
+                , hg.name AS group_name
+                , hs.name AS squad_name
+                , hl.name AS level_name
+                , IFNULL(hl.salary, 0) AS level_salary
+                , m.username AS member_username
+                , m.nick AS member_nick
+                , IFNULL(m.nick, m.username) AS member_fullname
+                , m.avatar AS member_avatar
+                , GROUP_CONCAT(CONCAT(r.role_id, ';;', r.position, ';;', r.name, ';;', r.color) SEPARATOR '||') AS roles
                 , IF (e.entered_at IS NOT NULL, 1, 0) AS  online
-            FROM (
-
-                SELECT
-                    m.guild_id
-                    , m.member_id
-                    , m.username
-                    , m.nick
-                    , m.discriminator
-                    , m.avatar
-                    , MAX(r2.position) AS max_position
-                    , CAST(TRIM(REVERSE(SUBSTR(REVERSE(m.nick), 1, LOCATE('|', REVERSE(m.nick)) - 1))) AS UNSIGNED) AS player_id
-                FROM discord_members m
-                INNER JOIN discord_member_roles mr ON (m.guild_id = mr.guild_id AND m.member_id = mr.member_id AND mr.role_id = ?)
-                INNER JOIN discord_member_roles mr2 ON (m.guild_id = mr2.guild_id AND m.member_id = mr2.member_id)
-                INNER JOIN discord_roles r2 ON (m.guild_id = r2.guild_id AND mr2.role_id = r2.role_id)
-                WHERE m.guild_id = ?
-                GROUP BY m.member_id
-
-            ) AS mrp
-            INNER JOIN discord_roles r ON (mrp.guild_id = r.guild_id AND mrp.max_position = r.position)
-            INNER JOIN discord_member_roles mr ON (mrp.guild_id = mr.guild_id AND mrp.member_id = mr.member_id)
-            INNER JOIN discord_roles r2 ON (mrp.guild_id = r2.guild_id AND mr.role_id = r2.role_id)
-            LEFT JOIN discord_expedient e ON (mrp.guild_id = e.guild_id AND mrp.member_id = e.member_id AND e.channel_id = ? AND e.left_at IS NULL)
-            GROUP BY mrp.member_id
-            ORDER BY mrp.max_position DESC, mrp.player_id
+            FROM discord_hierarchy_groups hg
+            INNER JOIN discord_hierarchy_squads hs ON (hg.guild_id = hs.guild_id AND hg.group_id = hs.group_id)
+            INNER JOIN discord_hierarchy_squad_levels hsl ON (hs.guild_id = hsl.guild_id AND hs.squad_id = hsl.squad_id)
+            INNER JOIN discord_hierarchy_levels hl ON (hsl.guild_id = hl.guild_id AND hsl.level_id = hl.level_id)
+            INNER JOIN discord_hierarchy_squad_members hsm ON (hs.guild_id = hsm.guild_id AND hs.squad_id = hsm.squad_id AND hl.level_id = hsm.level_id)
+            INNER JOIN discord_members m ON (hsm.guild_id = m.guild_id AND hsm.member_id = m.member_id)
+            INNER JOIN discord_member_roles mr ON (m.guild_id = mr.guild_id AND m.member_id = mr.member_id)
+            INNER JOIN discord_roles r ON (mr.role_id = r.role_id)
+            LEFT JOIN discord_expedient e ON (m.guild_id = e.guild_id AND m.member_id = e.member_id AND e.channel_id = ? AND e.left_at IS NULL)
+            WHERE hg.guild_id = ?
+            GROUP BY m.member_id
+            ORDER BY
+                hg.order
+                , hl.order
+                , hs.order
+                , m.member_id
+            ;
         `;
 
-        const args = [process.env.DS_ROLE_STAFF, process.env.GUILD_ID, process.env.DS_CHANNEL_ADMINISTRACAO_BATER_PONTO];
+        const args = [process.env.DS_CHANNEL_ADMINISTRACAO_BATER_PONTO, process.env.GUILD_ID];
 
         const staffList = ((await knex.raw(query, args))[0]).map(user => {
-            user.username = utf8.decode(user.username);
-            user.nick = utf8.decode(user.nick);
-            user.role_name = utf8.decode(user.role_name);
-            user.role_color = '#' + intToHex(user.role_color);
+            user.member_username = utf8.decode(user.member_username);
+            user.member_nick = utf8.decode(user.member_nick);
+            user.member_fullname = utf8.decode(user.member_fullname);
 
             user.roles = user.roles.split('||')
                 .map(role => {
@@ -70,6 +64,21 @@ module.exports = async (req, res) => {
                     if (a.position < b.position) return 1;
                     return 0;
                 });
+
+            user.advs = user.roles.filter(role => {
+                return role.id == process.env.DS_ROLE_ADV_VERBAL
+                    || role.id == process.env.DS_ROLE_ADV_1
+                    || role.id == process.env.DS_ROLE_ADV_2
+                    || role.id == process.env.DS_ROLE_ADV_3
+                    ;
+            }).length;
+
+            user.advs_staff = user.roles.filter(role => {
+                return role.id == process.env.DS_ROLE_ADV_1_STAFF
+                    || role.id == process.env.DS_ROLE_ADV_2_STAFF
+                    || role.id == process.env.DS_ROLE_ADV_3_STAFF
+                    ;
+            }).length;
 
             return user;
         });

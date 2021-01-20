@@ -36,36 +36,42 @@
                 <thead>
                     <tr>
                         <th width="80">Avatar</th>
-                        <th width="300">Staff</th>
-                        <th width="150">Cargo</th>
-                        <th width="150">Online</th>
+                        <th>Staff</th>
+                        <th width="120">Grupo</th>
+                        <th width="120">Time</th>
+                        <th width="120">Cargo</th>
+                        <th width="100" class="text-center">ADVs Staff</th>
+                        <th width="100" class="text-center">Online</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="staff in staffs.list">
                         <td>
-                            <img :src="staff.avatar" :alt="staff.nick" class="img-rounded" style="max-width: 32px;">
+                            <img :src="staff.member_avatar" :alt="staff.member_fullname" class="img-rounded"
+                                style="max-width: 32px;">
                         </td>
                         <td>
                             <a :href="'/app/staff/' + staff.member_id">
-                                {{ staff.nick }}
+                                {{ staff.member_fullname }}
                             </a>
                         </td>
                         <td>
-                            <span
-                                class="role pull-left"
-                                :style="`
-                                    border-color: ${staff.roles[0].color};
-                                    margin: 0 8px 8px 0;
-                                    padding: .2em .6em .3em;
-                                `"
-                            >
-                                {{ staff.roles[0].name }}
-                            </span>
+                            {{ staff.group_name }}
                         </td>
                         <td>
+                            {{ staff.squad_name }}
+                        </td>
+                        <td>
+                            {{ staff.level_name }}
+                        </td>
+                        <td class="text-center">
+                            <span class="label" v-if="staff.advs_staff > 0" :class="{
+                                'label-warning': staff.advs_staff == 1,
+                                'label-danger': staff.advs_staff == 2,
+                            }">{{ staff.advs_staff }}</span>
+                        </td>
+                        <td class="text-center">
                             <span class="label label-success" v-if="staff.online">Sim</span>
-                            <span class="label label-danger" v-if="!staff.online">Não</span>
                         </td>
                     </tr>
                 </tbody>

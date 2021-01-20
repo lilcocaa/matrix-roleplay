@@ -32,7 +32,7 @@
         </div>
 
         <div class="box-body table-responsive no-padding" v-if="staffs.loaded && staffs.list.length">
-            <table class="table table-striped table-hover">
+            <table class="table table-bordered table-striped table-hover">
                 <thead>
                     <tr>
                         <th width="80">Avatar</th>
@@ -40,6 +40,7 @@
                         <th width="120">Grupo</th>
                         <th width="120">Time</th>
                         <th width="120">Cargo</th>
+                        <th width="100" class="text-right">Salário</th>
                         <th width="100" class="text-center">ADVs Staff</th>
                         <th width="100" class="text-center">Online</th>
                     </tr>
@@ -63,6 +64,11 @@
                         </td>
                         <td>
                             {{ staff.level_name }}
+                        </td>
+                        <td class="text-right">
+                            <span v-if="staff.level_salary > 0">
+                                {{ staff.level_salary_formatted }}
+                            </span>
                         </td>
                         <td class="text-center">
                             <span class="label" v-if="staff.advs_staff > 0" :class="{

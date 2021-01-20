@@ -1,6 +1,6 @@
 const knex = require('../../../database/connection');
 const utf8 = require('utf8');
-const { intToHex } = require('../../../helpers/helpers');
+const { intToHex, number_format } = require('../../../helpers/helpers');
 
 module.exports = async (req, res) => {
     try {
@@ -47,6 +47,7 @@ module.exports = async (req, res) => {
             user.member_username = utf8.decode(user.member_username);
             user.member_nick = utf8.decode(user.member_nick);
             user.member_fullname = utf8.decode(user.member_fullname);
+            user.level_salary_formatted = number_format(user.level_salary, 0, ',', '.');
 
             user.roles = user.roles.split('||')
                 .map(role => {

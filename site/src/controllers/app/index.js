@@ -12,6 +12,7 @@ router.get('/', require('./home'));
 router.get('/logout', require('./logout'));
 
 router.use('/staff', require('./staff'));
+router.use('/cripto', require('./cripto'));
 
 // Erro 404 do app
 router.use(require('./error-404'));

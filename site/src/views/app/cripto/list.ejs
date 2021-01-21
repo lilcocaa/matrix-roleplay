@@ -1,0 +1,239 @@
+<%- contentFor('body') %>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        <i class="fa fa-money"></i> Cripto
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="/app">Home</a></li>
+        <li class="active"><i class="fa fa-money"></i> Cripto</li>
+    </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Lista de Moedas</h3>
+        </div>
+
+        <div class="box-body" v-if="staffs.loading && !staffs.loaded">
+            <div class="alert alert-info">
+                Carregando...
+            </div>
+        </div>
+
+        <div class="box-body" v-if="staffs.loaded && !staffs.list.length">
+            <div class="alert alert-warning">
+                Nenhum registro encontrado
+            </div>
+        </div>
+
+        <div class="box-body table-responsive no-padding" v-if="staffs.loaded && staffs.list.length">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Moeda</th>
+                        <th class="text-right">Compra</th>
+                        <th class="text-right">Venda</th>
+                        <th class="text-center">Base</th>
+                        <th class="text-center">Usa Base</th>
+                        <th class="text-center">Pode Roubar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="coin in coins">
+                        <td>{{ coin.name }}</td>
+                        <td class="text-right">{{ coin.buyFormatted }}</td>
+                        <td class="text-right">{{ coin.sellFormatted }}</td>
+                        <td class="text-center">{{ coin.base }}</td>
+                        <td class="text-center">{{ coin.use_base }}</td>
+                        <td class="text-center">{{ coin.can_rob }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="overlay" v-if="staffs.loading">
+            <i class="fa fa-refresh fa-spin"></i>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Lista de Staff</h3>
+        </div>
+        <!-- /.box-header -->
+
+        <div class="box-body" v-if="staffs.loading && !staffs.loaded">
+            <div class="alert alert-info">
+                Carregando...
+            </div>
+        </div>
+
+        <div class="box-body" v-if="staffs.loaded && !staffs.list.length">
+            <div class="alert alert-warning">
+                Nenhum registro encontrado
+            </div>
+        </div>
+
+        <div class="box-body table-responsive no-padding" v-if="staffs.loaded && staffs.list.length">
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th width="80">Avatar</th>
+                        <th>Staff</th>
+                        <th class="text-right" v-for="coin in coins">
+                            {{ coin.name }}
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="staff in staffs.list">
+                        <td>
+                            <img :src="staff.member_avatar" :alt="staff.member_fullname" class="img-rounded"
+                                style="max-width: 32px;">
+                        </td>
+                        <td>
+                            {{ staff.member_fullname }}
+                            <br><small>({{ staff.member_id }})</small>
+                            <br><small>({{ staff.id }})</small>
+                        </td>
+
+                        <!-- <td> -->
+                        <!-- <pre>{{ staff.coins }}</pre> -->
+                        <!-- </td> -->
+
+                        <td class="text-right" v-for="coin in coins">
+
+                            <div class="form-group" :class="{
+                                'has-error': staff.coins[coin.coin_id].input.error
+                            }">
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control" placeholder="Quantidade..."
+                                        v-model="staff.coins[coin.coin_id].input.value"
+                                        :disabled="staff.coins[coin.coin_id].input.disabled">
+
+                                    <span class="input-group-btn">
+
+                                        <button class="btn btn-default" type="button"
+                                            @click.prevent="buyCoin(staff, coin)"
+                                            :disabled="staff.coins[coin.coin_id].input.disabled">
+                                            <span class="fa fa-plus"></span>
+                                        </button>
+
+                                        <button class="btn btn-default" type="button"
+                                            @click.prevent="sellCoin(staff, coin)"
+                                            :disabled="staff.coins[coin.coin_id].input.disabled">
+                                            <span class="fa fa-minus"></span>
+                                        </button>
+
+                                    </span>
+                                </div>
+
+                                <smal class="help-block" v-html="staff.coins[coin.coin_id].input.messages.join('<br>')">
+                                </smal>
+                            </div>
+
+                            <div v-if="staff.coins[coin.coin_id].value > 0">
+                                {{ staff.coins[coin.coin_id].valueFormatted }}
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+
+        <div class="overlay" v-if="staffs.loading">
+            <i class="fa fa-refresh fa-spin"></i>
+        </div>
+    </div>
+
+</section>
+<!-- /.content -->
+
+<%- contentFor('scripts') %>
+<script>
+    mixins.push({
+        data: {
+            staffs: {
+                loading: true,
+                loaded: false,
+                error: false,
+                messages: [],
+                list: [],
+            },
+            coins: {},
+        },
+        methods: {
+
+            init: function () {
+                App.getStaffs();
+            },
+
+            getStaffs: async () => {
+                try {
+                    function callback(data) {
+                        if (typeof data.error !== 'undefined') App.staffs.error = data.error;
+                        if (typeof data.messages !== 'undefined') App.staffs.messages = data.messages;
+                        if (typeof data.content !== 'undefined') {
+                            if (typeof data.content.coins !== 'undefined') App.coins = data.content.coins;
+
+                            if (typeof data.content.staffs !== 'undefined') App.staffs.list = data.content.staffs
+                                .map(staff => {
+                                    for (let i in staff.coins) {
+                                        staff.coins[i].input = {
+                                            disabled: false,
+                                            value: '',
+                                            error: false,
+                                            messages: [],
+                                        };
+                                    }
+                                    return staff;
+                                });
+                        }
+
+                        App.staffs.loading = false;
+                        App.staffs.loaded = true;
+                    }
+
+                    App.staffs.loading = true;
+
+                    const { data } = await axios.get('/api/cripto')
+
+                    callback(data);
+                } catch ({ response }) {
+                    callback(response.data);
+                }
+            },
+
+            buyCoin: async (staff, coin) => {
+                const coin_id = coin.coin_id;
+                const id = staff.id
+
+                staff.coins[coin_id].input.disabled = true;
+                staff.coins[coin_id].input.error = false;
+                staff.coins[coin_id].input.messages = [];
+                staff.coins[coin_id].input.value = parseFloat(staff.coins[coin_id].input.value.trim()).toFixed(6).trim();
+
+                const amount = parseFloat(staff.coins[coin_id].input.value.trim());
+                console.log('coin_id', coin_id);
+                console.log('id', id);
+                console.log('amount', amount);
+
+                const buy = (await axios.get('/api/cripto/buy', {
+                    params: {
+                        coin_id,
+                        id,
+                        amount,
+                    },
+                })).data;
+
+                console.log('buy', buy);
+            },
+
+        },
+    });
+</script>

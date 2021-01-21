@@ -22,6 +22,7 @@ module.exports = async (req, res) => {
                 , m.avatar AS member_avatar
                 , GROUP_CONCAT(CONCAT(r.role_id, ';;', r.position, ';;', r.name, ';;', r.color) SEPARATOR '||') AS roles
                 , IF (e.entered_at IS NOT NULL, 1, 0) AS  online
+                , w.player_id AS id
             FROM discord_hierarchy_groups hg
             INNER JOIN discord_hierarchy_squads hs ON (hg.guild_id = hs.guild_id AND hg.group_id = hs.group_id)
             INNER JOIN discord_hierarchy_squad_levels hsl ON (hs.guild_id = hsl.guild_id AND hs.squad_id = hsl.squad_id)
@@ -30,6 +31,7 @@ module.exports = async (req, res) => {
             INNER JOIN discord_members m ON (hsm.guild_id = m.guild_id AND hsm.member_id = m.member_id)
             INNER JOIN discord_member_roles mr ON (m.guild_id = mr.guild_id AND m.member_id = mr.member_id)
             INNER JOIN discord_roles r ON (mr.role_id = r.role_id)
+            INNER JOIN discord_whitelist w ON (m.guild_id = w.guild_id AND m.member_id = w.member_id)
             LEFT JOIN discord_expedient e ON (m.guild_id = e.guild_id AND m.member_id = e.member_id AND e.channel_id = ? AND e.left_at IS NULL)
             WHERE hg.guild_id = ?
             GROUP BY m.member_id

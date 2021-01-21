@@ -9,6 +9,7 @@ router.get('/', require('./home'));
 router.get('/me', require('./me'));
 
 router.use('/staff', require('./staff'));
+router.use('/cripto', require('./cripto'));
 
 // Erro 404 da aí
 router.use(require('./error-404'));

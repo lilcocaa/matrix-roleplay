@@ -236,6 +236,48 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
 
 1. Milícia: Visto que a milícia é composta por policiais e ex-policiais, para fazer parte da Facção Milícia na cidade, o jogador precisará ter passado pelo menos duas semanas (tempo de nárnia) como policial. Após esse período ele poderá entrar para a milícia seguindo as regras da facção, sendo um policial ainda, ou não. Caso seja descoberto, sofrerá penas dentro do RP como exoneração e prisão. A Milícia não poderá ter membros que não atendem esses requisitos.
 
+### ALIANÇAS
+
+Existem dois **Tipos** de Facções na Cidade:
+
+- **Facções Dinâmicas**: aquelas que dominam morros/favelas
+    - 🔫 Crime Organizado
+    - 🧨 C4
+
+- **Facções Fixas**: aquelas que possuem locais próprios de atuação
+    - 🍸 Vanilla
+    - 🐉 Yakuza
+    - 🔪 Milicia
+
+1. Não existe limite de **Alianças** na Cidade, porém cada **Facção** só pode estar em apenas **uma única aliança por vez**
+
+1. Cada aliança deve conter uma **Fação Dinâmica** e uma **Facção Fixa**
+
+1. Toda aliança devem durar 15 dias (tempo de Nárnia), porém a aliança pode ser desfeita antes desse prazo
+
+1. Após os 15 dias de duração da aliança, ambas as Facções só poderão fazer uma nova aliança (com qualquer outra Facção, inclusive a mesma) após 7 dias (tempo de Nárnia);
+
+1. Alianças servem para que ambas as Facções tenham vantagens entre si:
+
+    - Vantagens permitidas sobre **Farms/Fabricação**:
+        - É permitido à Facção que realiza a venda de itens gerados nas farms/fabricação aplicar descontos de no máximo 50% para a Facção aliada;
+        - É permitido à Facção que realiza a venda de itens gerados nas farms/fabricação aumentar os preços em no máximo 50% para as Facções que não fazem parte da aliança;
+        - **NÃO É PERMITIDO** bloquear as vendas para as Facções que não fazem parte da aliança;
+
+    - Vantagens permitidas sobre os **Locais de Atuação**:
+        - É permitido que ambas as Facções circulem em todos os seus locais de atuação;
+        - **NÃO É PERMITIDO** usar nada que seja de outra Facção, mesmo que sejam aliadas (usar baú, farms e fabricações).
+
+    - Vantagens permitidas em **Ações**:
+        - É permitido que a **Facção Fixa** ajude a **Facção Dinâmica** em **INVASÕES / DOMINAÇÃO**, tanto para defender quanto para invadir;
+        - É permitido que ambas as **Facções da Aliança** realizem **Ações Grandes** juntas;
+        - **NÃO É PERMITIDO** que as **Facções da Aliança** realizem, juntas, qualquer outra ação que não esteja descrita acima;
+
+    - **NÃO É PERMITIDO** que nenhuma das **Facções da Aliança** tenham vantagens que não estejam descritas acima;
+
+1. É possivel encerrar uma aliança antes do prazo de 15 dias (tempo de Nárnia). Esse ato será considerado uma "quebra de acordo". Logo, **AMBAS as Facções** terão uma penalidade:
+    - Elas não poderão realizar nenhuma outra aliança no prazo de 30 dias (tempo de Nárnia);
+
 ### NOVAS FACÇÕES
 
 1. Toda Facção nova deverá começar do zero. Não terá farm de drogas, desmanches ou produção de armas. Os membros deverão, por esforço próprio, alcançar os seus objetivos, que no caso são **armas**, **dinheiro**, **membros** e **dominação** de favelas/comunidades, que hoje estão sob o poder do Crime Organizado.
@@ -401,6 +443,7 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
     - Roubo de Veículos;
     - Sequestro;
     - Ação de ATM/Caixa eletrônico;
+    - Lojinha;
 
 1. **Serão consideradas ações grandes**:
 
@@ -420,9 +463,14 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
         - **Calibre 12**
 
 1. A polícia só pode ser looteada nas situações abaixo:
-    - Ação de Lojinha
     - Invasões de Favelas
     - Ações Grandes
+        - Banco do Norte
+        - Banco Central
+        - Pacificações
+        - Mandados de Busca e Apreensão
+
+1. Se a policia for looteada fora das ações descritas acima, os jogadores que participarem serão penalizados com **ADV**.
 
 1. **É estritamente proibido realizar emboscadas para a polícia para forçar RP**;
 
@@ -484,4 +532,4 @@ As regras gerais, visam o bom RP e bom convívio dentro do servidor, servindo co
 >
 > As regras contidas aqui não são opcionais. Devem ser seguidas para o bom RP de todos.
 
-`v2.4.0`
+`v2.5.0`

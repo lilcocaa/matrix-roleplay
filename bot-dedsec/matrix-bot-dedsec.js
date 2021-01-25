@@ -8,9 +8,10 @@ const moment = require('moment-timezone');
 moment.locale('pt-br');
 moment.tz('America/Sao_Paulo');
 
-const { Client, MessageAttachment } = require('discord.js');
+const { Client, MessageAttachment, MessageEmbed } = require('discord.js');
 const client = new Client();
 const knex = require('./src/database/connection');
+const number_format = require('./src/helpers/number-format');
 
 const { getMessageVars, sendMessage, checkCommand } = require('./src/managers/discord');
 
@@ -44,7 +45,7 @@ client.on('message', async message => {
 
     if (isDm) return;
 
-    if (guild.id != process.env.DS_GUILD) return;
+    if (guild.id != process.env.GUILD_ID) return;
 
     if (checkCommand(message, 'DEBUG')) {
         console.log('=> COMMAND: !debug');
@@ -236,7 +237,48 @@ client.on('message', async message => {
 
         if (channel.id == process.env.DS_CHANNEL_DEDSEC_CONTRATAR) { }
 
-        if (channel.id == process.env.DS_CHANNEL_DEDSEC_BLOCKCHAIN) { }
+        if (channel.id == process.env.DS_CHANNEL_DEDSEC_BLOCKCHAIN) {
+
+            if (messageCommand == 'valores') {
+                const query = `
+                    SELECT coin_id, name, buy, sell
+                    FROM discord_coins
+                    WHERE guild_id = ?
+                    AND base != 1
+                    ORDER BY name;
+                `;
+
+                const args = [
+                    process.env.GUILD_ID,
+                ];
+
+                const data = (await knex.raw(query, args))[0];
+
+                if (!data.length) {
+                    message.reply('não temos nenhuma moeda ativa no momento.');
+                    return;
+                }
+
+                const msg = [
+                    `<@${author.id}>, essas são as moedas ativas.`,
+                    ``,
+                ];
+
+                for (let i in data) {
+                    msg.push(`${parseInt(i) + 1}. **${data[i].name}**: $ ${number_format(data[i].buy, 0, ',', '.')}`);
+                }
+
+                const response = new MessageEmbed()
+                    .setTitle('Criptomoedas')
+                    .setColor(0x0000ff)
+                    .setDescription(msg.join('\n'));
+
+                const ch = message.guild.channels.cache.get(process.env.DS_CHANNEL_DEDSEC_BLOCKCHAIN);
+                ch.send(response);
+
+            }
+
+        }
 
         if (messageCommand != 'clear') {
             message.delete();

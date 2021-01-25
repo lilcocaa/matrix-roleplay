@@ -221,11 +221,11 @@ client.on('message', async message => {
                     `Lista de comandos`,
                     ``,
                     `- \`!valores\` - Exibe os valores atuais da **ZionCoin**;`,
-                    `- \`!comprar 0.032\` - Compra, por exemplo, 0.032 **ZionCoins**. O valor pode ser alterado;`,
-                    `- \`!vender 0.032\` - Vende, por exemplo, 0.032 **ZionCoins**. O valor pode ser alterado;`,
+                    `- \`!comprar 3\` - Compra, por exemplo, 3 **ZionCoins**. A quantidade pode ser alterada, incrementando de 0,5 em 0,5;`,
+                    `- \`!vender 3\` - Vende, por exemplo, 3 **ZionCoins**. A quantidade pode ser alterada, incrementando de 0,5 em 0,5;`,
                     `- \`!carteira\` - Exibe sua carteira, com os valores do **Dinheiro Comum** e da **ZionCoin**;`,
                     `- \`!carteira-top\` - Exibe um top 10 dos mais ricos do Discord (apenas da **ZionCoin**);`,
-                    `- \`!transferir 0.032 @Hackerzera\` - Transfere 0.032 **ZionCoins** para o usuário **Hackerzera**. Tanto o valor quanto o usuário podem ser alterados;`,
+                    `- \`!transferir 3 @Hackerzera\` - Transfere 3 **ZionCoins** para o usuário **Hackerzera**. Tanto o valor quanto o usuário podem ser alterados;`,
                 ].join('\n'));
 
                 await ch.send([
@@ -240,42 +240,16 @@ client.on('message', async message => {
         if (channel.id == process.env.DS_CHANNEL_DEDSEC_BLOCKCHAIN) {
 
             if (messageCommand == 'valores') {
-                const query = `
-                    SELECT coin_id, name, buy, sell
-                    FROM discord_coins
-                    WHERE guild_id = ?
-                    AND base != 1
-                    ORDER BY name;
-                `;
+                const displayValues = require('./src/managers/criptocoin').displayValues;
+                displayValues(message);
+                return;
 
-                const args = [
-                    process.env.GUILD_ID,
-                ];
+            }
 
-                const data = (await knex.raw(query, args))[0];
-
-                if (!data.length) {
-                    message.reply('não temos nenhuma moeda ativa no momento.');
-                    return;
-                }
-
-                const msg = [
-                    `<@${author.id}>, essas são as moedas ativas.`,
-                    ``,
-                ];
-
-                for (let i in data) {
-                    msg.push(`${parseInt(i) + 1}. **${data[i].name}**: $ ${number_format(data[i].buy, 0, ',', '.')}`);
-                }
-
-                const response = new MessageEmbed()
-                    .setTitle('Criptomoedas')
-                    .setColor(0x0000ff)
-                    .setDescription(msg.join('\n'));
-
-                const ch = message.guild.channels.cache.get(process.env.DS_CHANNEL_DEDSEC_BLOCKCHAIN);
-                ch.send(response);
-
+            if (messageCommand == 'comprar') {
+                const buy = require('./src/managers/criptocoin').buy;
+                buy(message);
+                return;
             }
 
         }

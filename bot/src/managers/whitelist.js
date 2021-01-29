@@ -188,10 +188,10 @@ async function releaseWhitelist(message) {
         `Agradecemos por você escolher nossa Cidade!!!`,
         `Agora você pode visualizar nossos canais. Aproveite para solicitar um emprego ou fazer alguma sugestão nos canais indicados.`,
         `Esperamos que você se divirta muito! E caso precise, pode chamar alguem da nossa Staff para te ajudar.`,
-        `Temos um grupo exclusivo no Whatsapp. Fique à vontade para entrar nele e conversar com todos os demais jogadores.`,
-        `Temos também um site onde você pode encontrar os melhores carros, e temos também os Planos VIPS!`,
+        // `Temos um grupo exclusivo no Whatsapp. Fique à vontade para entrar nele e conversar com todos os demais jogadores.`,
+        `Temos um site onde você pode encontrar os melhores carros, e temos também os Planos VIPS!`,
         `Lembre-se de ler as nossas regras, e respeitar todo mundo, tanto na Cidade quanto no Discord =)`,
-        `Link para o grupo do Whatsapp: https://chat.whatsapp.com/FBUINItGvG62n4Ral6pzaD`,
+        // `Link para o grupo do Whatsapp: https://chat.whatsapp.com/FBUINItGvG62n4Ral6pzaD`,
         `Link para o Site: http://matrixroleplay.com.br/`,
         `Link para as Regras: http://matrixroleplay.com.br/regras`,
     ];
